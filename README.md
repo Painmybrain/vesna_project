@@ -1,5 +1,6 @@
 # vesna_project
 
+### Страницы макета:
 - Главная - index.html
 - Портфолио - portfolio.html
 - Проект - project.html
