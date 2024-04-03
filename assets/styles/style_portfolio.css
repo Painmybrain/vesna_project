@@ -11,6 +11,7 @@
   src: url(../fonts/MarckScript-Regular.ttf);
 }
 .header {
+  border: 1px solid red;
   background-image: url(../images/portfolio/main_foto.jpg);
   width: 100%;
 }
@@ -21,4 +22,14 @@
   font-weight: 700;
   font-size: 70px;
   line-height: 88px;
+  text-align: center;
+}
+
+.header__text {
+  color: rgb(255, 255, 255);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
 }/*# sourceMappingURL=style_portfolio.css.map */

@@ -20,6 +20,7 @@ $White: rgba(255, 255, 255, 1);
 
 // header
 .header {
+    border: 1px solid red;
     background-image: url(../images/portfolio/main_foto.jpg);
     width: 100%;
 }
@@ -29,4 +30,13 @@ $White: rgba(255, 255, 255, 1);
     font-weight: 700;
     font-size: 70px;
     line-height: 88px;
+    text-align: center;
+}
+.header__text {
+    color: $White;
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
 }
