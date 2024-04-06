@@ -1,11 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles/normalize.css" />
-    <link rel="stylesheet" href="./assets/styles/style_contacts.css" />
-    <title>Document</title>
+    <title>Контакты - Vesna</title>
+    <style>
+      /* Reset styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif; /* Или другой доступный шрифт */
+        background-color: #f8f8f8;
+        color: #333;
+      }
+
+      /* Header styles */
+      header {
+        background-image: url("https://s3-alpha-sig.figma.com/img/65ce/1048/68bb3e807b7ac3eb944b86e67d34d755?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=U0bHDhrIKrOzBt4B2KA~Cl7NT2aUr37Otq~xsK737VavOitlKBoYzlPQ7ovqHr7C9XmqCvzn~Wj3-a9nfDmOi14JMKK6mkTl6WcHish-XYBlCHdbkPNfLQs13xFfukmWnXGQqlA2tCTKOXctE2Kbs7foBT~NvmQNbjP3OLr0hhIpQBcSs7x0lvkRgRW1YBN~G9HMqH1QQueWH60wVOQlZuKdOYbdSRs4V-Zmp-reICeKu~9NdMstcINo7HJE8z717dMsIkawcULOo9XfDjw0XADcLLlC9Ur9NALTfeoN1kPcF-Xf~pUmJKt3mZGOfy0T6o2cYrxrwWsWPiZ7mbdXqA__");
+        background-size: cover;
+        padding: 20px 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      /* Contact section styles */
+      #contact {
+        background-color: white;
+        padding: 50px 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      #contact form {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      #contact form input,
+      #contact form textarea,
+      #contact form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+
+      #contact form button {
+        background-color: #5c8a8a;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+
+      #contact form button:hover {
+        background-color: #333;
+      }
+
+      .contact-info {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .contact-info div,
+      .contact-info a,
+      .contact-info span {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .contact-info a {
+        color: #5c8a8a;
+        text-decoration: none;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Vesna</div>
+        <ul>
+          <li><a href="#about">Главная</a></li>
+          <li><a href="#projects">Портфолио</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="contact">
+      <form>
+        <input type="text" placeholder="Выборка благоустройства" />
+        <input type="email" placeholder="Email" />
+        <input type="tel" placeholder="+7 (___) ___-__-__" />
+        <textarea placeholder="Комментарий"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <div class="contact-info">
+        <div>
+          <span>Санкт-Петербург</span>
+          <a href="tel:+79218888888">+7 (921) 888 88 88</a>
+          <a href="mailto:info@vesna.ru">info@vesna.ru</a>
+          <a href="https://instagram.com/" target="_blank">instagram.com/...</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 VESNA Политика конфиденциальности</p>
+      </div>
+    </footer>
+  </body>
 </html>
