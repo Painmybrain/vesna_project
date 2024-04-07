@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Noah-Bold;
   src: url(../fonts/Noah-Bold.ttf);
@@ -9,4 +10,318 @@
 @font-face {
   font-family: MarckScript-Regular;
   src: url(../fonts/MarckScript-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  justify-items: center;
+  justify-content: center;
+  background-image: url(../images/portfolio/main_foto.png);
+  background-size: cover;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 40% 20%;
+  gap: 2px;
+  width: 100%;
+  height: 35rem;
+  padding-top: 2rem;
+}
+
+.header__logo {
+  padding-left: 4rem;
+} /*логопотип в header слева*/
+.header__nav {
+  padding-top: 3rem;
+  font-family: Noah-Regular;
+} /*меню*/
+.header__nav-menu {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  font-size: 14pt;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.header__nav a:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.2);
+} /*подчеркивание под пунктами меню при наведении*/
+.header__contact {
+  padding-top: 1rem;
+  font-family: Noah-Regular;
+}
+
+.header__consulting {
+  padding-top: 0.5rem;
+  padding-left: 1.2rem;
+  font-size: 11pt;
+  color: rgb(255, 255, 255);
+}
+
+.header__phone {
+  width: 13rem;
+  height: 3.75rem;
+  padding-top: 1.3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: 14pt;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1337px;
+}
+
+.link_main {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  gap: 5%;
+  justify-self: start;
+  margin-bottom: 8rem;
+  min-width: 320px;
+}
+
+.pointer-back__img {
+  width: 100%;
+}
+
+.link_back {
+  align-self: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  min-width: 1336px;
+  min-height: 562px;
+  margin-bottom: 8rem;
+}
+
+.card__img {
+  width: 100%;
+  align-self: center;
+}
+
+.main-card__text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  max-width: 597px;
+}
+
+.card__text-title {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+
+.title_h2 {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 72px;
+}
+
+.text-18 {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.text-24 {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.card__text-1 {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+.card__text-feature-5 {
+  grid-row: 5/6;
+  grid-column: 1/3;
+}
+
+.card__text-feature-6 {
+  grid-row: 6/7;
+  grid-column: 1/3;
+}
+
+.card__text-2 {
+  grid-row: 7/8;
+  grid-column: 1/3;
+}
+
+.card2__text_center {
+  justify-self: center;
+  align-self: center;
+}
+
+.card2__text {
+  max-width: 424px;
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.card__text {
+  max-width: 597px;
+  align-self: center;
+}
+
+.main__text {
+  max-width: 464px;
+  margin-bottom: 4rem;
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.main-form {
+  display: grid;
+  grid-template-areas: "main-form__form form_img1 form_img1" "main-form__form form_img2 form_img3";
+  gap: 1rem;
+  align-content: center;
+  margin-bottom: 8rem;
+}
+
+.main-form__form {
+  grid-area: main-form__form;
+  display: grid;
+  max-width: 430px;
+  text-align: center;
+  background-color: rgb(84, 90, 47);
+}
+
+.form_img1 {
+  grid-area: form_img1;
+}
+
+.form_img2 {
+  grid-area: form_img2;
+}
+
+.form_img3 {
+  grid-area: form_img3;
+}
+
+.form_container {
+  align-self: center;
+  color: rgb(255, 255, 255);
+}
+
+.form__text {
+  margin: 0 36px 40px 36px;
+}
+
+.form {
+  margin: 0 19px;
+}
+
+.form__text_title {
+  color: rgb(255, 255, 255);
+}
+
+.form__text_text {
+  color: rgb(255, 255, 255);
+}
+
+.phone {
+  margin-bottom: 36px;
+  padding-left: 19px;
+  width: 392px;
+  height: 50px;
+}
+
+.form_checkbox {
+  text-align: start;
+  margin-bottom: 36px;
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#checkbox {
+  margin-right: 21px;
+}
+
+.btn-form {
+  width: 289px;
+  height: 60px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+  color: rgb(255, 255, 255);
+}
+
+.btn-form:hover {
+  background-color: rgb(153, 161, 142);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 35% 1fr 20%;
+  grid-template-rows: 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 14rem;
+  background-color: #545A2F;
+}
+
+.footer__contacts {
+  padding-top: 3.5rem;
+  padding-left: 5rem;
+  font-family: Noah-Regular;
+  color: rgb(255, 255, 255);
+}
+
+.footer__email {
+  padding-top: 1rem;
+}
+
+.footer__copyright {
+  padding-top: 5rem;
+  font-size: 9pt;
+}
+
+.footer__img {
+  padding-top: 1.5rem;
+  padding-left: 7rem;
+}
+
+.footer__instagram {
+  padding-top: 2.5rem;
+  padding-left: 10rem;
+}
+
+.footer__confidential {
+  padding-top: 6rem;
+  padding-left: 3rem;
+  font-family: Noah-Regular;
+  font-size: 9pt;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style_project.css.map */
