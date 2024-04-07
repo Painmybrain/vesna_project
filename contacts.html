@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/normalize.css" />
     <link rel="stylesheet" href="./assets/styles/style_portfolio.css" />
+    <link rel="stylesheet" href="./assets/styles/style_contacts.css" />
+    <link rel="stylesheet" href="./assets/styles/style_contacts.scss" />
     <title>Document</title>
   </head>
 
@@ -26,52 +28,44 @@
         <p class="header__consulting">Бесплатная консультация</p>
       </div>
       <div class="header__words">
-        <h1 class="header__title">Портфолио</h1>
-        <h4 class="header__text">Наши избранные проекты</h4>
+        <h1 class="header__title">Контакты</h1>
       </div>
     </header>
     <main class="main">
       <!-- Основное содержимое страницы -->
       <!-- Секция контактной формы начинается здесь -->
-      <div class="contact-section">
+      <div class="contact-container">
         <h2>Свяжитесь с нами, чтобы проконсультироваться</h2>
-        <form id="contact-form">
-          <input type="text" id="name" name="name" placeholder="Имя" />
-          <input type="email" id="email" name="email" placeholder="Email" />
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="+7(___) ___ ____"
-          />
-          <textarea
-            id="comment"
-            name="comment"
-            placeholder="Комментарий"
-          ></textarea>
-          <div class="checkbox">
-            <input type="checkbox" id="consent" name="consent" />
-            <label for="consent"
-              >Я даю согласие на обработку своих персональных данных</label
-            >
-          </div>
-          <button type="submit">Отправить</button>
-        </form>
-      </div>
-      <div class="contact-info">
-        <div class="phone">
-          <img src="assets/images/contacts/Group 256.png" alt="Телефон" />
-          <span>+7 (921) 888 88 88</span>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" id="name" name="name" placeholder="Ваше имя">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="tel" id="phone" name="phone" placeholder="+7(___)-___-____">
+                <textarea id="comment" name="comment" placeholder="Комментарий"></textarea>
+                <div class="consent-checkbox">
+                    <input type="checkbox" id="consent" name="consent">
+                    <label for="consent">Я даю согласие на обработку своих персональных данных</label>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
         </div>
-        <div class="email">
-          <img src="assets/images/contacts/Group 257.png" alt="Email" />
-          <span>info@vesna.ru</span>
+        <div class="contact-info">
+            <div class="info-item">
+                <img src="assets/images/contacts/Group 256.png" alt="Телефон" class="icon">
+                <span>+7 (921) 888 88 88</span>
+            </div>
+            <div class="info-item">
+                <img src="assets/images/contacts/Group 257.png" alt="Email" class="icon">
+                <span>info@vesna.ru</span>
+            </div>
+            <div class="info-item">
+                <img src="assets/images/contacts/Group 163.png" alt="Instagram" class="icon">
+                <span>instagram.com/...</span>
+            </div>
         </div>
-        <div class="social-media">
-          <img src="assets/images/contacts/Group 163.png" alt="Instagram" />
-          <a href="https://instagram.com/...">instagram.com/...</a>
-        </div>
-      </div>
+    </div>
+    
+    </body>
       <!-- Секция контактной формы заканчивается здесь -->
     </main>
     <footer class="footer">
@@ -99,6 +93,6 @@
         <div class="footer__confidential">Политика конфиденциальности</div>
       </div>
     </footer>
-    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/contacts.js"></script>
   </body>
 </html>
