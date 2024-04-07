@@ -30,7 +30,50 @@
         <h4 class="header__text">Наши избранные проекты</h4>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <!-- Основное содержимое страницы -->
+      <!-- Секция контактной формы начинается здесь -->
+      <div class="contact-section">
+        <h2>Свяжитесь с нами, чтобы проконсультироваться</h2>
+        <form id="contact-form">
+          <input type="text" id="name" name="name" placeholder="Имя" />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+7(___) ___ ____"
+          />
+          <textarea
+            id="comment"
+            name="comment"
+            placeholder="Комментарий"
+          ></textarea>
+          <div class="checkbox">
+            <input type="checkbox" id="consent" name="consent" />
+            <label for="consent"
+              >Я даю согласие на обработку своих персональных данных</label
+            >
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <div class="phone">
+          <img src="assets/images/contacts/Group 256.png" alt="Телефон" />
+          <span>+7 (921) 888 88 88</span>
+        </div>
+        <div class="email">
+          <img src="assets/images/contacts/Group 257.png" alt="Email" />
+          <span>info@vesna.ru</span>
+        </div>
+        <div class="social-media">
+          <img src="assets/images/contacts/Group 163.png" alt="Instagram" />
+          <a href="https://instagram.com/...">instagram.com/...</a>
+        </div>
+      </div>
+      <!-- Секция контактной формы заканчивается здесь -->
+    </main>
     <footer class="footer">
       <div class="footer__contacts">
         <div class="footer__phone">+7(921) 888 88 88</div>
@@ -56,5 +99,6 @@
         <div class="footer__confidential">Политика конфиденциальности</div>
       </div>
     </footer>
+    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
