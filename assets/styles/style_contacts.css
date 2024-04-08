@@ -1,12 +1,115 @@
-@font-face {
-  font-family: Noah-Bold;
-  src: url(../fonts/Noah-Bold.ttf);
+.contact-container {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две колонки */
+  gap: 300px;
 }
-@font-face {
-  font-family: Noah-Regular;
-  src: url(../fonts/Noah-Regular.ttf);
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
 }
-@font-face {
-  font-family: MarckScript-Regular;
-  src: url(../fonts/MarckScript-Regular.ttf);
-}/*# sourceMappingURL=style_contacts.css.map */
+
+.contact-form, .contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form, h2 {
+  margin-bottom: 20px; /* Добавляет отступ снизу для заголовка */
+} 
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+.consent-checkbox {
+  display: flex;
+  align-items: 20px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 30px; /* Увеличенный отступ для чекбокса */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Устанавливает отступ справа от чекбокса */
+}
+
+button {
+  background-color: #545A2F;
+  color: white;
+  padding: 20px 60px;
+  margin-bottom: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-info {
+  margin-top: 70px; /* Смещает вторую колонку вниз на 50px */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info a {
+  text-decoration: none; /* Убирает подчеркивание */
+  color: inherit; /* Цвет текста будет наследован от родителя */
+  /* Добавьте дополнительные стили, если необходимо */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  size: 83px 83px; /* Размер иконки для десктопа */
+  margin-right: 25px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr; /* Одна колонка для мобильных */
+    margin: 60px auto;
+    padding: 10px;
+  }
+
+  .contact-header {
+    margin-bottom: 40px;
+  }
+
+  button {
+    padding: 15px 30px;
+    margin-bottom: 20px;
+  }
+
+  .consent-checkbox {
+    margin-bottom: 30px;
+  }
+
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Добавляем стиль для пробела между заголовком и формой */
+.contact-header + .contact-form {
+  margin-top: 40px;
+}
