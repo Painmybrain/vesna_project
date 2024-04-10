@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Noah-Bold;
   src: url(../fonts/Noah-Bold.ttf);
@@ -9,4 +10,330 @@
 @font-face {
   font-family: MarckScript-Regular;
   src: url(../fonts/MarckScript-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  justify-items: center;
+  justify-content: center;
+  background-image: url(../images/portfolio/main_foto.png);
+  background-size: cover;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 40% 20%;
+  gap: 2px;
+  width: 100%;
+  height: 35rem;
+  padding-top: 2rem;
+}
+
+.header__logo {
+  padding-left: 4rem;
+} /*логопотип в header слева*/
+.header__nav {
+  padding-top: 3rem;
+  font-family: Noah-Regular;
+} /*меню*/
+.header__nav-menu {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  font-size: 14pt;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.header__nav a:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.2);
+} /*подчеркивание под пунктами меню при наведении*/
+.header__contact {
+  padding-top: 1rem;
+  font-family: Noah-Regular;
+}
+
+.header__consulting {
+  padding-top: 0.5rem;
+  padding-left: 1.2rem;
+  font-size: 11pt;
+  color: rgb(255, 255, 255);
+}
+
+.header__phone {
+  width: 13rem;
+  height: 3.75rem;
+  padding-top: 1.3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: 14pt;
+  background-color: rgb(255, 255, 255);
+}
+
+.header__words {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-column: 1/4;
+  align-items: start;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.header__title {
+  color: rgb(255, 255, 255);
+  font-family: Noah-Bold;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 88px;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+}
+
+.main__button {
+  background-image: url(../images/specific_service/button_arrow.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 1336px;
+  height: 3rem;
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  justify-content: start;
+  align-content: center;
+  margin-bottom: 10rem;
+}
+
+.main__button a {
+  padding-left: 6rem;
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.main__galery1 {
+  max-width: 1336px;
+  max-height: 562px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10rem;
+  gap: 5rem;
+}
+
+.galery1__words {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  gap: 4rem;
+}
+
+.galery1__title {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 72px;
+}
+
+.galery1__text {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.main__galery2 {
+  max-width: 1136px;
+  max-height: 1080px;
+  margin-bottom: 10rem;
+}
+
+.galery__text {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.text__h4 {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.galery__images2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "galery2_img1 galery2_img2 galery2_img2" "galery2_img3 galery2_img4 galery2_img5";
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.galery2_img1 {
+  grid-area: galery2_img1;
+}
+
+.galery2_img2 {
+  grid-area: galery2_img2;
+}
+
+.galery2_img3 {
+  grid-area: galery2_img3;
+}
+
+.galery2_img4 {
+  grid-area: galery2_img4;
+}
+
+.galery2_img5 {
+  grid-area: galery2_img5;
+}
+
+.galery__images2 img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.main__story {
+  max-width: 848px;
+  max-height: 450px;
+  margin-bottom: 10rem;
+  display: grid;
+  justify-items: center;
+  gap: 4rem;
+}
+
+.title__h2 {
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 72px;
+}
+
+.text__h5 {
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.services__navigation {
+  width: 100%;
+  height: 234px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.previous__service {
+  background-image: url(../images/specific_service/button1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  justify-items: center;
+  padding-left: 15%;
+  padding-right: 5%;
+}
+
+.next__service {
+  background-image: url(../images/specific_service/button2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  padding-right: 15%;
+  padding-left: 5%;
+}
+
+.service__text {
+  color: rgb(255, 255, 255);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.service__title {
+  color: rgb(255, 255, 255);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 72px;
+}
+
+.service__link1 {
+  width: 6rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service__link2 {
+  width: 6rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 35% 1fr 20%;
+  grid-template-rows: 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 14rem;
+  background-color: #545A2F;
+}
+
+.footer__contacts {
+  padding-top: 3.5rem;
+  padding-left: 5rem;
+  font-family: Noah-Regular;
+  color: rgb(255, 255, 255);
+}
+
+.footer__email {
+  padding-top: 1rem;
+}
+
+.footer__copyright {
+  padding-top: 5rem;
+  font-size: 9pt;
+}
+
+.footer__img {
+  padding-top: 1.5rem;
+  padding-left: 7rem;
+}
+
+.footer__instagram {
+  padding-top: 2.5rem;
+  padding-left: 10rem;
+}
+
+.footer__confidential {
+  padding-top: 6rem;
+  padding-left: 3rem;
+  font-family: Noah-Regular;
+  font-size: 9pt;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style_specific_service.css.map */

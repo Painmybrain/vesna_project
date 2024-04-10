@@ -9,4 +9,107 @@
 @font-face {
   font-family: MarckScript-Regular;
   src: url(../fonts/MarckScript-Regular.ttf);
+}
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contact-section .contact-header,
+.contact-section .contact-form,
+.contact-section .contact-info {
+  width: calc(50% - 10px);
+}
+.contact-section .contact-header h2,
+.contact-section .contact-form h2,
+.contact-section .contact-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.contact-section .contact-header input,
+.contact-section .contact-header textarea,
+.contact-section .contact-header button,
+.contact-section .contact-form input,
+.contact-section .contact-form textarea,
+.contact-section .contact-form button,
+.contact-section .contact-info input,
+.contact-section .contact-info textarea,
+.contact-section .contact-info button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.contact-section .contact-header input:last-child,
+.contact-section .contact-header textarea:last-child,
+.contact-section .contact-header button:last-child,
+.contact-section .contact-form input:last-child,
+.contact-section .contact-form textarea:last-child,
+.contact-section .contact-form button:last-child,
+.contact-section .contact-info input:last-child,
+.contact-section .contact-info textarea:last-child,
+.contact-section .contact-info button:last-child {
+  background-color: rgb(84, 90, 47);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact-section .contact-header .info-item,
+.contact-section .contact-form .info-item,
+.contact-section .contact-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact-section .contact-header .info-item img,
+.contact-section .contact-form .info-item img,
+.contact-section .contact-info .info-item img {
+  width: 83px;
+  height: 83px;
+  margin-right: 10px;
+}
+.contact-section .contact-header .info-item span,
+.contact-section .contact-header .info-item a,
+.contact-section .contact-form .info-item span,
+.contact-section .contact-form .info-item a,
+.contact-section .contact-info .info-item span,
+.contact-section .contact-info .info-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-section .contact-header,
+  .contact-section .contact-form,
+  .contact-section .contact-info {
+    width: 100%;
+  }
+  .contact-section .contact-header h2,
+  .contact-section .contact-form h2,
+  .contact-section .contact-info h2 {
+    text-align: center;
+  }
+  .contact-section .contact-header .info-item img,
+  .contact-section .contact-form .info-item img,
+  .contact-section .contact-info .info-item img {
+    width: 50px;
+    height: 50px;
+  }
 }/*# sourceMappingURL=style_contacts.css.map */
