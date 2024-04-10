@@ -1,291 +1,115 @@
-.contact-container {
-  max-width: 1200px;
-  margin: 100px auto;
-  padding: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Две колонки */
-  gap: 300px;
+@font-face {
+  font-family: Noah-Bold;
+  src: url(../fonts/Noah-Bold.ttf);
+}
+@font-face {
+  font-family: Noah-Regular;
+  src: url(../fonts/Noah-Regular.ttf);
+}
+@font-face {
+  font-family: MarckScript-Regular;
+  src: url(../fonts/MarckScript-Regular.ttf);
+}
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
 
-.head, .title {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.contact-content {
+.contact-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-.contact-form, .contact-info {
-  display: flex;
-  flex-direction: column;
+.contact-section .contact-header,
+.contact-section .contact-form,
+.contact-section .contact-info {
+  width: calc(50% - 10px);
 }
-
-.contact-form form {
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form, h2 {
-  margin-bottom: 20px; /* Добавляет отступ снизу для заголовка */
-} 
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  padding: 15px;
+.contact-section .contact-header h2,
+.contact-section .contact-form h2,
+.contact-section .contact-info h2 {
+  font-size: 24px;
+  color: #333;
   margin-bottom: 20px;
+  text-align: left;
+}
+.contact-section .contact-header input,
+.contact-section .contact-header textarea,
+.contact-section .contact-header button,
+.contact-section .contact-form input,
+.contact-section .contact-form textarea,
+.contact-section .contact-form button,
+.contact-section .contact-info input,
+.contact-section .contact-info textarea,
+.contact-section .contact-info button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
-  font-size: 18px;
 }
-
-.consent-checkbox {
-  display: flex;
-  align-items: 20px;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 30px; /* Увеличенный отступ для чекбокса */
-}
-
-input[type="checkbox"] {
-  margin-right: 10px; /* Устанавливает отступ справа от чекбокса */
-}
-
-button {
-  background-color: #545A2F;
+.contact-section .contact-header input:last-child,
+.contact-section .contact-header textarea:last-child,
+.contact-section .contact-header button:last-child,
+.contact-section .contact-form input:last-child,
+.contact-section .contact-form textarea:last-child,
+.contact-section .contact-form button:last-child,
+.contact-section .contact-info input:last-child,
+.contact-section .contact-info textarea:last-child,
+.contact-section .contact-info button:last-child {
+  background-color: rgb(84, 90, 47);
   color: white;
-  padding: 20px 60px;
-  margin-bottom: 40px;
   border: none;
   cursor: pointer;
-  font-size: 18px;
 }
-
-.contact-info {
-  margin-top: 70px; /* Смещает вторую колонку вниз на 50px */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.contact-info a {
-  text-decoration: none; /* Убирает подчеркивание */
-  color: inherit; /* Цвет текста будет наследован от родителя */
-  /* Добавьте дополнительные стили, если необходимо */
-}
-
-.info-item {
+.contact-section .contact-header .info-item,
+.contact-section .contact-form .info-item,
+.contact-section .contact-info .info-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
-.icon {
+.contact-section .contact-header .info-item img,
+.contact-section .contact-form .info-item img,
+.contact-section .contact-info .info-item img {
   width: 83px;
   height: 83px;
-  margin-right: 25px;
+  margin-right: 10px;
+}
+.contact-section .contact-header .info-item span,
+.contact-section .contact-header .info-item a,
+.contact-section .contact-form .info-item span,
+.contact-section .contact-form .info-item a,
+.contact-section .contact-info .info-item span,
+.contact-section .contact-info .info-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
 }
 
-@media (max-width: 456px) {
-  .contact-container {
-    grid-template-columns: 1fr; /* Одна колонка для мобильных */
-    margin: 60px auto;
-    padding: 10px;
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
   }
-
-  .contact-header {
-    margin-bottom: 40px;
+  .contact-section .contact-header,
+  .contact-section .contact-form,
+  .contact-section .contact-info {
+    width: 100%;
   }
-
-  button {
-    padding: 15px 30px;
-    margin-bottom: 20px;
+  .contact-section .contact-header h2,
+  .contact-section .contact-form h2,
+  .contact-section .contact-info h2 {
+    text-align: center;
   }
-
-  .consent-checkbox {
-    margin-bottom: 30px;
-  }
-
-  .icon img {
+  .contact-section .contact-header .info-item img,
+  .contact-section .contact-form .info-item img,
+  .contact-section .contact-info .info-item img {
     width: 50px;
     height: 50px;
   }
-}
-
-/* Добавляем стиль для пробела между заголовком и формой */
-.contact-header + .contact-form {
-  margin-top: 40px;
-}
-
-.modal-content p {
-  margin-bottom: 20px; /* для менеджера */
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Центрирование элементов по горизонтали */
-  width: 100%; /* Или конкретная ширина, если нужно */
-}
-
-.header__contact {
-  text-align: center;
-  /* Другие стили для header__contact */
-}
-
-.header__phone {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 10px;
-}
-
-.header__phone:hover {
-  background-color: #545A2F;
-  color: white;
-}
-
-.header__consulting {
-  display: block; /* Заставляет ссылку занимать всю строку */
-  text-align: center; /* Центрирование текста ссылки */
-  margin-top: 10px; /* Отступ сверху для создания пространства после формы */
-  font-size: 17px;
-}
-
-
-.form-container input,
-.form-container button {
-  width: 80%; /* Или другой желаемый размер */
-  margin: 10px 0; /* Отступ сверху и снизу */
-}
-
-/* Контейнер модального окна, покрывающий весь экран */
-.modal {
-  display: none; /* Скрыть модальное окно по умолчанию */
-  position: fixed; /* Фиксированное позиционирование */
-  left: 0;
-  top: 0;
-  width: 100%; /* Ширина на весь экран */
-  height: 100%; /* Высота на весь экран */
-  background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
-  z-index: 1000; /* Убедитесь, что модальное окно будет поверх других элементов */
-  display: flex; /* Использование flexbox для центрирования */
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
-}
-
-/* Стиль для отображения модального окна */
-.modal:target {
-  display: flex; /* Используйте flexbox для центрирования */
-}
-
-/* Стили для контента модального окна */
-.modal-content {
-  background-image: url('../assets/images/consultation.png'); /* Укажите правильный путь к вашему изображению */
-  background-size: cover; /* Покрытие всей доступной области */
-  background-position: center; /* Центрирование изображения */
-  background-repeat: no-repeat; /* Не повторять изображение */
-  position: relative;
-  background-size: cover;
-  width: 676px;
-  height: 631px;
-  padding: 20px;
-  border: 1px solid #888;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Центрирование по горизонтали */
-}
-
-.modal-content h2 {
-  color: #545A2F; /* Цвет текста, соответствующий кнопкам */
-  font-size: 40px; /* Увеличение размера шрифта */
-  line-height: 1.4; /* Расстояние между строками */
-  text-align: center; /* Выравнивание текста по центру */
-  word-wrap: break-word; /* Разрешить перенос слов */
-}
-
-.modal-content p {
-text-align: center;
-}
-.modal button {
-  background-color: #545A2F;
-  color: white;
-  padding: 20px 60px;
-  margin-bottom: 100px;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  text-align: center;
-  width: 311px; /* Ширина кнопки */
-  height: 60px;
-  padding: 15px 0; /* Вертикальный внутренний отступ для увеличения высоты */
-  margin: 70px auto; /* Отступ сверху и снизу и автоматическое центрирование */
-}
-
-.checkbox-container label {
-  font-size: 14px; /* Регулировка размера шрифта */
-  line-height: normal; /* Уменьшение межстрочного интервала */
-  display: flex;
-  align-items: center; /* Чтобы текст и чекбокс были на одной линии */
-  margin-left: 10px; /* Регулировка отступа от чекбокса */
-  margin-bottom: 15px; /* Расстояние между чекбоксом и следующим элементом */
-}
-
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px; /* Элементы располагаются вертикально */
-}
-
-.checkbox {
-  margin-bottom: 10px; /* Отступ снизу для чекбокса */
-}
-
-.checkbox-label label {
-  margin-left: 10px; /* Лейбл отображается как блочный элемент */
-}
-
-/* Стили для крестика */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: bold;
-  color: #aaa;
-}
-
-.close:hover,
-.close:focus {
-  color: #777;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.close:hover,
-.close:focus {
-  color: #777; /* Цвет крестика при наведении */
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.modal {
-  display: none; /* Скрыть модальное окно по умолчанию */
-}
-
-.modal input[type="text"] {
-  width: 80%; /* Ширина поля ввода */
-  padding: 10px; /* Внутренний отступ для увеличения высоты поля */
-  margin-bottom: 15px; /* Расстояние между полями */
-}
-
-.modal input[type="tel"] {
-  width: 80%; /* Ширина поля ввода */
-  padding: 10px; /* Внутренний отступ для увеличения высоты поля */
-  margin-bottom: 15px; /* Расстояние между полями */ 
-}
+}/*# sourceMappingURL=style_contacts.css.map */

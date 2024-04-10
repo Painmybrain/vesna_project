@@ -244,10 +244,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  justify-items: center;
+  grid-template-columns: 90% 10%;
   align-items: center;
-  align-content: center;
-  gap: 1rem;
+  justify-items: center;
+  padding-left: 15%;
+  padding-right: 5%;
 }
 
 .next__service {
@@ -255,10 +256,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  justify-items: center;
+  grid-template-columns: 10% 90%;
   align-items: center;
-  align-content: center;
+  justify-items: center;
   gap: 1rem;
+  padding-right: 15%;
+  padding-left: 5%;
 }
 
 .service__text {
@@ -280,7 +283,13 @@
 .service__link1 {
   width: 6rem;
   height: 3rem;
-  background: url(../images/specific_service/arrow_prev.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service__link2 {
+  width: 6rem;
+  height: 3rem;
   background-repeat: no-repeat;
   background-position: center;
 }
