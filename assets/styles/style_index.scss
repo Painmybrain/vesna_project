@@ -30,10 +30,15 @@ $White: rgba(255, 255, 255, 1);
     grid-template-rows: 1fr;
     gap: 2px;
     width: 100%;
-    height: 23vh;
+    height: 98vh;
     padding-top: 2rem;
-    background-color: cadetblue; /*добавила фон лишь на время, чтобы было видно, где лого. Можно потом убрать, как всё проставится на места*/
 }
+
+.header {
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-image: url("/assets/images/main/Rectangle101.png");
+} /*тут картинка под меню*/
 
 .header__logo {
     padding-left: 4rem;
@@ -79,6 +84,292 @@ $White: rgba(255, 255, 255, 1);
     padding-left: 2rem;
     font-size: 14pt;
     background-color: $White;
+}
+
+.header__pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 2rem;
+    border: 1px solid white;
+}
+
+.header__text {
+    color:$White;
+    border: 1px solid white;
+}
+
+.header__leaves {
+    width: 31rem;
+    height: 23rem;
+    border: 1px solid white;
+}
+
+.main__explanation-leaves {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 1fr;
+}
+
+.main__explanation-ll {
+    width: 19vw;
+    padding-top: 75%;
+    border: 1px solid black;
+}
+
+.main__explanation-rl {
+    width: 19vw;
+    padding-top: 75%;
+    border: 1px solid black;
+}
+
+.main__explanation-text {
+    padding-top: 15%;
+    text-align: center;
+}
+
+.main__examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 75vh;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px solid black;
+}
+
+.examples__pic1, .examples__pic2, .examples__pic3 {
+    width: 30em;
+    height: 23em;
+    padding: 1%;
+}
+
+.main__trust-title {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.main__trust-title1 {
+    font-family: Noah-Bold;
+    font-size: 35pt;
+}
+
+.main__trust-title2 {
+    font-family: Noah-Regular;
+    font-size: 25pt;
+    font-weight:100;
+    border: 1px solid black;
+}
+
+.main__trust-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 6%;
+}
+
+.main__trust-options {
+    background-image: url("/assets/images/main/Group197.png");
+    background-size:65% 95%;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.trust-options__pictures {
+    padding-left: 6%;
+}
+
+.trust-options__title {
+    font-family: Noah-Regular;
+    font-size: 12pt;
+    text-align: center;
+    padding-bottom: 2.5%;
+}
+
+.pictures__wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+}
+
+.pictures__example1 {
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: 90%;
+}
+
+.pictures__example2 {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    width: 60%;
+}
+
+.trust-options__points {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    border: 1px solid black;
+}
+
+.logo-2, .logo-3 {
+    padding-top: 25vh;
+}
+
+.logo-2 {
+    padding-left: 3.5vw;
+}
+
+.logo-3 {
+    padding-left: 6.5vw;
+}
+
+.points__text {
+    padding-top: 1vh;
+    padding-left: 2vw;
+    font-family: Noah-Regular;
+}
+
+.points__text-2, .points__text-3 {
+    padding-top: 28vh;
+}
+
+.points__text-2 {
+    padding-left: 3vw;
+}
+
+.points__text-3 {
+    padding-left: 6vw;
+}
+
+
+.main__do {
+    padding-top: 15%;
+    font-family: Noah-Regular;
+}
+
+.main__do-title {
+    text-align: center;
+    font-size: 26pt;
+    font-weight: 100;
+}
+
+.main__service {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 9%;
+}
+
+.service1__title {
+    font-size: 16pt;
+    padding-bottom: 7%;
+    border: 1px solid black;
+}
+
+.service1__points {
+    padding-left: 5%;
+    line-height: 1.5;
+}
+
+.points1 {
+    padding-bottom: 10%;
+}
+
+.service2__title {
+    font-size: 16pt;
+    padding-bottom: 7%;
+    border: 1px solid black;
+}
+
+.service2__points {
+    padding-left: 5%;
+    line-height: 1.5;
+}
+
+.points2 {
+    padding-bottom: 10%;
+}
+
+.service3__title {
+    font-size: 16pt;
+    padding-bottom: 7%;
+    border: 1px solid black;
+}
+
+.service3__points {
+    padding-left: 5%;
+    line-height: 1.5;
+}
+
+.points3 {
+    padding-bottom: 10%;
+}
+
+.main__service-button {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align:center;
+}
+
+.service-button {
+    width: 13%;
+    height: 5vh;
+    font-family: Noah-Regular;
+    color: $White;
+    background-color: $HakiDark;
+}
+
+.main__choose {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border: 1px solid black;
+}
+
+.main__journal {
+    position: absolute;
+    border: 1px solid black;
+}
+
+.journal__pic {
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.main__form {
+    padding-top: 14%;
+    padding-bottom: 15%;
+    font-family: Noah-Regular;
+}
+
+.main__choose-title {
+    width: 85vw;
+    padding-left: 60%;
+    padding-bottom: 2%;
+    font-size: 24pt;
+    font-weight: 100;
+}
+
+.main__choose-form {
+    padding: 5%;
+    border: 1px solid black;
+    background-color: $HakiLight;
+}
+
+.form {
+    padding-left: 62%;
+    line-height: 2;
 }
 
 .footer {
