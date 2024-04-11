@@ -212,11 +212,11 @@
         <div class="main__choose-form">
           <form class="form">
             <p class="choose-form__title">Пришлем инструкцию!</p>
-            <label for="email">Ваш E-mail</label>
-            <input type="email" name="email" required>
+            <label for="email"></label>
+            <input type="email" name="email" required placeholder="Ваш E-mail" class="choose-form__email">
             <div>
             <input type="checkbox" name="personal_information" value="yes">
-            <label for="personal_information">Я даю согласие на обработку своих персональных данных
+            <label for="personal_information" class="personal__text">Я даю согласие на обработку своих персональных данных
             </label>
             </div>
           </form>
@@ -231,6 +231,151 @@
             <img src="assets/images/main/journal.png" alt="Journal" class="journal__pic">
           </div>
       </div>
+
+      <!--Тут начинается вторая часть. Наши проекты-->
+      <div class="main__projects">
+        <h2 class="main__projects-title">Наши проекты</h2>
+        <div class="main__projects-pic">
+          <div class="projects__button">
+            <button type="button" class="all_button">
+              Все проекты
+            <img src="assets/images/main/arrow_project.svg" alt="all" class="arrow">
+            </button>
+          </div>
+          <div class="projects-pic1">
+          <a href="http://example.com">
+          <img src="assets/images/main/project1.png" alt="project1" class="project">
+          </a>
+        </div>
+        <div class="projects-pic2">
+          <a href="http://example.com">
+          <img src="assets/images/main/project2.png" alt="project2" class="project">
+          </a>
+        </div>
+        <div class="projects-pic3">
+          <a href="http://example.com">
+          <img src="assets/images/main/project3.png" alt="project3" class="project">
+          </a>
+        </div>
+        <div class="projects-pic4">
+          <a href="http://example.com">
+          <img src="assets/images/main/project4.png" alt="project4" class="project">
+          </a>
+        </div>
+      </div>
+      </div>
+
+      <!--Часть 4 шага-->
+      <div class="main__dreams">
+        <div class="main__titles">
+        <h2 class="main__dreams-title1">4 шага до реализации проекта</h2>
+        <h2 class="main__dreams-title2">вашей мечты</h2>
+        </div>
+
+        <div class="dreams__points">
+          <p class="points__number-1">01</p>
+          <div class="dreams__points-1">
+            <h3 class="dreams__points-title">Расскажите нам, что вы хотите увидеть на своем участке</h3>
+            <p>Побеседуйте с нашим специалистом. Он приедет к вам в любое удобное время.</p>
+          </div>
+          <p class="points__number-2">02</p>
+          <div class="dreams__points-2">
+            <h3 class="dreams__points-title">Оцените проект, который разрабатывают наши специалисты, и внесите изменения</h3>
+            <p>Архитектор разработает проект ландшафтного дизайна и сделает 3D-визуализацию.</p>
+          </div>
+          <p class="points__number-3">03</p>
+          <div class="dreams__points-3">
+            <h3 class="dreams__points-title">Дождитесь окончания ландшафтных работ</h3>
+            <p>Вы получите идеальный участок с хорошим дренажом, мощеными дорожками и площадками, высаженными растениями — деревьями, кустарниками, цветами и газоном.</p>
+          </div>
+          <p class="points__number-4">04</p>
+          <div class="dreams__points-4">
+            <h3 class="dreams__points-title">Делегируйте уход за участком профессионалам</h3>
+            <p>При необходимости мы будем приезжать регулярно и следить за состоянием участка.</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Почему нас выбирают-->
+      <div class="main__why">
+      <h2 class="main__why-title">Почему нас выбирают</h2>
+      <div class="main__why-points">
+        <div class="why-points__reason1">
+          <img src="assets/images/main/carbon_schematics.svg" alt="reason1">
+          <p class="reasons__text">Создаем проекты, которые точно можно реализовать</p>
+        </div>
+        <div class="why-points__reason2">
+          <img src="assets/images/main/cil_flower.svg" alt="reason2">
+          <p class="reasons__text">Наши объекты легко эксплуатировать</p>
+        </div>
+        <div class="why-points__reason3">
+          <img src="assets/images/main/dashicons_money-alt.svg" alt="reason3">
+          <p class="reasons__text">Делаем с умом под любой бюджет</p>
+        </div>
+        <div class="why-points__reason4">
+          <img src="assets/images/main/mdi-light_diamond.svg" alt="reason4">
+          <p class="reasons__text">У нас высокое качество посадочного материала</p>
+        </div>
+        <div class="why-points__reason5">
+          <img src="assets/images/main/carbon_security.svg" alt="reason5">
+          <p class="reasons__text">Даем гарантию на все виды работ</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Отзывы о нас-->
+    <div class="main__feedback">
+      <h2 class="main__feedback-title">Отзывы о нас</h2>
+      <div class="feedback__example">
+        <div>
+          <img src="assets/images/main/feedback_pic.png" alt="feedback" class="feedback__pic">
+        </div>
+        <div class="feedback">
+          <img src="assets/images/main/ph_tree-thin.svg" alt="feedback_logo" class="feedback__logo">
+          <h3 class="feedback__title">Анна Смирнова</h3>
+          <h4 class="feedback__title2">Благоустройство сада в Агалотово</h4>
+          <p class="feedback__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu </p>
+          <img src="assets/images/main/feedback_arrows.svg" alt="feedback_arrows" class="feedback__arrows">
+        </div>
+      </div>
+      <div class="feedback__numbers">
+        <img src="assets/images/main/feedback__numbers.svg" alt="feedback_numbers">
+      </div>
+    </div>
+
+    <!--Часто задаваемые вопросы-->
+    <div class="main__questions">
+      <div class="questions__points">
+        <h2 class="questions__points-title">Часто задаваемые вопросы</h2>
+        <div class="points">
+          <input class="hide" id="hd-1" type="checkbox">
+          <label for="hd-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</label>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+        </div>
+        <input class="hide" id="hd-2" type="checkbox">
+          <label for="hd-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</label>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+        </div>
+        <input class="hide" id="hd-3" type="checkbox">
+          <label for="hd-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</label>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+        </div>
+        <input class="hide" id="hd-4" type="checkbox">
+          <label for="hd-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</label>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+        </div>
+        <input class="hide" id="hd-5" type="checkbox">
+          <label for="hd-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</label>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
+        </div>
+        </div>
+      </div>
+    </div>
     </main>
     <footer class="footer">
       <div class="footer__contacts">

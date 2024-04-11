@@ -115,13 +115,11 @@ $White: rgba(255, 255, 255, 1);
 .main__explanation-ll {
     width: 19vw;
     padding-top: 75%;
-    border: 1px solid black;
 }
 
 .main__explanation-rl {
     width: 19vw;
     padding-top: 75%;
-    border: 1px solid black;
 }
 
 .main__explanation-text {
@@ -138,7 +136,6 @@ $White: rgba(255, 255, 255, 1);
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
-    border: 1px solid black;
 }
 
 .examples__pic1, .examples__pic2, .examples__pic3 {
@@ -161,7 +158,6 @@ $White: rgba(255, 255, 255, 1);
     font-family: Noah-Regular;
     font-size: 25pt;
     font-weight:100;
-    border: 1px solid black;
 }
 
 .main__trust-options {
@@ -193,7 +189,6 @@ $White: rgba(255, 255, 255, 1);
     position: relative;
     top: 0;
     left: 0;
-    border: 1px solid black;
 }
 
 .pictures__example1 {
@@ -216,7 +211,6 @@ $White: rgba(255, 255, 255, 1);
     padding-top: 12%;
     padding-left: 10%;
     padding-bottom: 10%;
-    border: 1px solid black;
 }
 
 .logo-2, .logo-3 {
@@ -273,7 +267,6 @@ $White: rgba(255, 255, 255, 1);
 .service1__title {
     font-size: 16pt;
     padding-bottom: 7%;
-    border: 1px solid black;
 }
 
 .service1__points {
@@ -288,7 +281,6 @@ $White: rgba(255, 255, 255, 1);
 .service2__title {
     font-size: 16pt;
     padding-bottom: 7%;
-    border: 1px solid black;
 }
 
 .service2__points {
@@ -303,7 +295,6 @@ $White: rgba(255, 255, 255, 1);
 .service3__title {
     font-size: 16pt;
     padding-bottom: 7%;
-    border: 1px solid black;
 }
 
 .service3__points {
@@ -333,12 +324,10 @@ $White: rgba(255, 255, 255, 1);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    border: 1px solid black;
 }
 
 .main__journal {
     position: absolute;
-    border: 1px solid black;
 }
 
 .journal__pic {
@@ -362,9 +351,10 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .main__choose-form {
-    padding: 5%;
-    border: 1px solid black;
+    padding-top: 2%;
+    padding-bottom: 5%;
     background-color: $HakiLight;
+    border: none;
 }
 
 .form {
@@ -372,6 +362,317 @@ $White: rgba(255, 255, 255, 1);
     line-height: 2;
 }
 
+.choose-form__title {
+    font-size: 12pt;
+}
+
+.choose-form__email {
+    width: 60%;
+    height: 4vh;
+}
+
+.personal__text {
+    font-size: 9pt;
+}
+
+.main__choose-button {
+    padding-top: 1%;
+    padding-left: 62%;
+}
+
+.choose-button {
+    width: 30%;
+    height: 5vh;
+    color: $White;
+    background-color: $HakiDark;
+}
+
+.main__projects {
+    padding-top: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.main__projects-title {
+    font-family: Noah-Regular;
+    font-weight: 100;
+    font-size: 27pt;
+    text-align: center;
+}
+
+.main__projects-pic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    gap: 0.5%;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.project {
+    width: 100%;
+}
+
+.projects__button {
+    position: absolute;
+    top: 42%;
+    left: 46.5%;
+    font-family: Noah-Regular;
+}
+
+.all_button {
+    width: 80%;
+    height: 15vh;
+    padding-top: 0.5%;
+    border-radius: 70%;
+}
+
+.all_button:hover {
+    color: $White;
+    background-color: $HakiDark;
+}
+
+.main__dreams {
+    padding-top: 4%;
+}
+
+.main__titles {
+    text-align: center;
+    font-family: Noah-Regular;
+}
+
+.dreams__points {
+    display: grid;
+    grid-template-columns: 5% 1fr 5% 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 5%;
+}
+
+.points__number-1, .points__number-2, .points__number-3, .points__number-4 {
+    font-family: MarckScript-Regular;
+    font-size: 35pt;
+}
+
+.dreams__points-title {
+    font-family: Noah-Bold;
+}
+
+.dreams__points-1, .dreams__points-2, .dreams__points-3, .dreams__points-4 {
+    font-family: Noah-Regular;
+}
+
+.dreams__points-3, .dreams__points-4 {
+    padding-top: 7%;
+}
+
+.dreams__points-2, .dreams__points-4 {
+    padding-left: 5%;
+}
+
+.points__number-2, .points__number-4 {
+    padding-left: 2vw;
+}
+
+.points__number-3, .points__number-4 {
+    padding-top: 5vh;
+}
+
+/*Тут часть "Почему нас выбирают*/
+.main__why {
+    padding-top: 5%;
+    background-color: #DDE3E1;
+}
+
+.main__why-title {
+    font-family: Noah-Regular;
+    font-size: 25pt;
+    font-weight: 100;
+    text-align: center;
+}
+
+.main__why-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr 15%;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 5%;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-bottom: 5%;
+    font-family: Noah-Regular;
+}
+
+.why-points__reason1, .why-points__reason2 {
+    width: 15vw;
+    padding-left: 10%;
+}
+
+.why-points__reason4, .why-points__reason5 {
+    padding-top: 7%;
+    padding-left: 60%;
+}
+
+.reasons__text {
+    padding-top: 5%;
+}
+
+
+/*Тут начинается часть Отзывы о нас*/
+.main__feedback {
+    padding-top: 8%;
+}
+
+.main__feedback-title {
+    font-family: Noah-Regular;
+    font-size: 30pt;
+    font-weight: 100;
+    text-align: center;
+}
+
+.feedback__example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 15%;
+    padding-bottom: 3%;
+    font-family: Noah-Regular;
+}
+
+.feedback__pic {
+    width: 90%;
+}
+
+.feedback {
+    width: 35vw;
+    padding-left: 7%;
+}
+
+.feedback__logo {
+    color: #5B6460;
+}
+
+.feedback__title, .feedback__title2 {
+    color: #5B6460;
+}
+
+.feedback__title {
+    font-size: 20pt;
+    font-weight: 100;
+}
+
+.feedback__title2 {
+    padding-top: 1%;
+    font-size: 12pt;
+    font-weight: 100;
+}
+
+.feedback__text {
+    padding-top: 5%;
+    font-size: 16pt;
+    font-weight: 100;
+}
+
+.feedback__arrows {
+    padding-top: 7%;
+    padding-left: 25vw;
+}
+
+.feedback__numbers {
+    padding-top: 1%;
+    padding-left: 45%;
+    padding-bottom: 5%;
+}
+
+/*Часто задаваемые вопросы*/
+.points {
+    max-width: 1024px;
+    padding: 0 20px;
+    margin: 5% 10%;
+}
+
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ div {
+    display: none;
+}
+
+/* вид текста label */
+.hide + label {
+    display: grid;
+    grid-template-columns: 5% 1fr;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: $Black;
+    border-bottom: 0;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: grid; 
+    background: #ffffff;
+    -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
+    -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
+    box-shadow: inset 3px 3px 10px #dadada;
+    padding: 2vw;
+
+    /* чуточку анимации при появлении */
+    -webkit-animation:fade ease-in 0.5s; 
+    -moz-animation:fade ease-in 0.5s;
+    animation:fade ease-in 0.5s; 
+}
+
+
+/* анимация при появлении скрытых блоков */
+@-moz-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }   
+}
+
+.hide + label:before {
+    display: grid;
+    width: 3vw;
+    height: 6vh;
+    padding-top: 5%;
+    font-size: 16pt; 
+    font-weight: bold;
+    line-height: 5%;
+    color: $HakiDark;
+    border-color: $HakiDark;
+    text-align: center;
+    border-radius: 50%;
+    content: "\002B";
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 1px solid $HakiDark;
+}
+
+.hide:checked + label:before {
+    content: "\2212";
+}
+
+
+/*Здесь футер*/
 .footer {
     display: grid;
     grid-template-columns: 35% 1fr 20%;
