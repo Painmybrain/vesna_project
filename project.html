@@ -8,24 +8,121 @@
     <title>Project</title>
   </head>
   <body>
-    <header class="header">
-      <img
-        class="header__logo"
-        src="/assets/images/header_footer/logo.svg"
-        alt="Logo"
-      />
-      <nav class="header__nav">
-        <a href="#" class="header__nav-menu">Главная</a>
-        <a href="#" class="header__nav-menu">Портфолио</a>
-        <a href="#" class="header__nav-menu">Услуги</a>
-        <a href="#" class="header__nav-menu">Контакты</a>
-      </nav>
-      <div class="header__contact">
-        <div class="header__phone">+7 (921) 888 88 88</div>
-        <p class="header__consulting">Бесплатная консультация</p>
+    <header>
+      <div class="header">
+        <img
+          class="header__logo"
+          src="/assets/images/header_footer/logo.svg"
+          alt="Logo"
+        />
+        <nav class="header__nav">
+          <a href="#" class="header__nav-menu">Главная</a>
+          <a href="#" class="header__nav-menu">Портфолио</a>
+          <a href="#" class="header__nav-menu">Услуги</a>
+          <a href="#" class="header__nav-menu">Контакты</a>
+        </nav>
+        <div class="header__contact">
+          <div class="header__phone">+7 (921) 888 88 88</div>
+          <p class="header__consulting">Бесплатная консультация</p>
+        </div>
       </div>
 
       <!-- Слайдер -->
+
+      <div class="slider">
+        <ul class="slides">
+          <li id="slide1">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide2">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide3">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide4">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide5">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide6">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide7">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide8">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide9">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide10">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide11">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+        </ul>
+        <ul class="thumbnails">
+          <li>
+            <a href="#slide1"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide2"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide3"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide4"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide5"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide6"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide7"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide8"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide9"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide10"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#slide11"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main class="main">
@@ -44,13 +141,13 @@
             >Назад к портфолио</a
           >
         </div>
+
         <div class="card main-card">
           <img
             class="card__img"
             src="/assets/images/project/card_img1_4.png"
             alt="Фото дизайна"
           />
-
           <div class="main-card__text">
             <div class="card__text-title">
               <h2 class="title_h2">Lorem ipsum</h2>
@@ -110,11 +207,10 @@
         </div>
         <div class="card card4">
           <img
-            class="card__img"
+            class="card__img card__img_4"
             src="/assets/images/project/card_img1_4.png"
             alt="Фото дизайна"
           />
-
           <div class="card__text">
             <p class="text-24">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -157,8 +253,11 @@
                     placeholder="+7(___)___ __ __"
                   />
                   <div class="form_checkbox">
-                    <input id="checkbox" type="checkbox" checked />Я даю
-                    согласие на обработку своих персональных данных
+                    <input id="checkbox" type="checkbox" checked />
+                    <label class="checkbox__label" for="checkbox"
+                      >Я даю согласие на обработку своих персональных
+                      данных</label
+                    >
                   </div>
 
                   <button type="submit" class="btn-form">
@@ -181,42 +280,57 @@
       </div>
     </main>
 
-    <!-- ссылка полностью вся карточка -->
-    <div class="another-project">
-      <p>Предыдущий проект</p>
-      <h2 class="another-project__name">Lorem ipsum</h2>
-      <a href="" target="_blank" class="another-project__link"></a>
-    </div>
-    <div class="another-project">
-      <p>Следующий проект</p>
-      <h2 class="another-project__name">Lorem ipsum</h2>
-      <a href="" target="_blank" class="another-project__link"></a>
-    </div>
-
-    <!-- футер для всех страниц -->
-    <footer class="footer">
-      <div class="footer__contacts">
-        <div class="footer__phone">+7(921) 888 88 88</div>
-        <div class="footer__email">info@vesna.ru</div>
-        <div class="footer__copyright">© 2021 VESNA</div>
-      </div>
-      <div class="footer__img">
-        <img
-          src="/assets/images/header_footer/group.svg"
-          alt="Footer logo"
-          class="footer__img-logo"
-        />
-      </div>
-      <div class="footer__socialmedia">
-        <div>
-          <a href="https://www.instagram.com" target="_blank">
-            <img
-              src="/assets/images/header_footer/instagram.svg"
-              alt="Instagram Icon"
-              class="footer__instagram"
-          /></a>
+    <footer>
+      <div class="another-projects">
+        <div class="project_preview">
+          <div class="another-project">
+            <h3 class="another-project__h3">Предыдущий проект</h3>
+            <h2 class="title_h2 another-project__name">Lorem ipsum</h2>
+            <a href="" class="another-project__pointer"></a>
+          </div>
         </div>
-        <div class="footer__confidential">Политика конфиденциальности</div>
+        <div class="project_next">
+          <div class="another-project another-project_next">
+            <h3 class="another-project__h3 another-project__h3_next">
+              Следующий проект
+            </h3>
+            <h2
+              class="title_h2 another-project__name another-project__name_next"
+            >
+              Lorem ipsum
+            </h2>
+            <a
+              href=""
+              class="another-project__pointer another-project__pointer_next"
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer__contacts">
+          <div class="footer__phone">+7(921) 888 88 88</div>
+          <div class="footer__email">info@vesna.ru</div>
+          <div class="footer__copyright">© 2021 VESNA</div>
+        </div>
+        <div class="footer__img">
+          <img
+            src="/assets/images/header_footer/group.svg"
+            alt="Footer logo"
+            class="footer__img-logo"
+          />
+        </div>
+        <div class="footer__socialmedia">
+          <div>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="/assets/images/header_footer/instagram.svg"
+                alt="Instagram Icon"
+                class="footer__instagram"
+            /></a>
+          </div>
+          <div class="footer__confidential">Политика конфиденциальности</div>
+        </div>
       </div>
     </footer>
   </body>

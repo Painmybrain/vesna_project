@@ -17,6 +17,8 @@ $White: rgba(255, 255, 255, 1);
     font-family: MarckScript-Regular;
     src: url(../fonts/MarckScript-Regular.ttf);
 }
+
+
 * {
     margin: 0;
     padding: 0;
@@ -287,16 +289,65 @@ $White: rgba(255, 255, 255, 1);
     background-position: center;
 }
 
+// КОНТАКТЫ
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 1440px;
+    min-height: 644px;
+    margin-bottom: 5rem;
+    justify-items: center;
+    align-content: center;
+    align-items: stretch;
+}
+.contact-container h3 {
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+}
+.contact-container h5,
+.contact-container a,
+.contact__form {
+    color: $Black;
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.contact-info {
+    display: grid;
+    width: 513px;
+}
+.info-item {
+    display: grid;
+
+}
 
 
-
-
-
-
-
-
-
-
+.contact__form {
+    width: 660px;
+    height: 490px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr;
+    gap: 2rem;
+}
+.contact_button {
+    display: grid;
+    justify-items: end;
+}
+.contact_button button {
+    width: 312px;
+    height: 60px;
+    background-color: $HakiDark;
+    color: $White;
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    border: transparent;
+}
 
 
 
