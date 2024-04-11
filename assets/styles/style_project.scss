@@ -26,7 +26,7 @@ $White: rgba(255, 255, 255, 1);
 
 a {
     text-decoration: none;
-  }
+}
 
 // header
 .header {
@@ -34,12 +34,12 @@ a {
     justify-content: center;
     background-image: url(../images/portfolio/main_foto.png);
     background-size: cover;
-    margin-bottom: 10rem;
+    
     display: grid;
     grid-template-columns: 1fr 40% 20%;
     gap: 2px;
     width: 100%;
-    height: 35rem;
+    height: 12rem;
     padding-top: 2rem;
 }
 .header__logo {
@@ -89,6 +89,123 @@ a {
 }
 // слайдер
 
+.slider {
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+    margin-bottom: 6rem;
+}
+.slider .slides {
+	overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 60vmin;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.slider .slides > li {
+	width: 100%;
+	height: 60vmin;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;    
+}
+.slider .slides > li > img {
+	width: 100%;
+	height: auto;
+}
+/*
+.slider .slides > li:first-child:not(:target) {
+	z-index: 1;
+	-webkit-transform: translateY(0%);
+	        transform: translateY(0%);
+}
+*/
+.slider .thumbnails {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.slider .thumbnails > li {
+	float: left;
+	width: 8.89%;    
+    margin-top: 0.2%;
+    opacity: 0.6;
+}
+
+.slider .thumbnails > li:not(:last-child) {
+    margin-right: 0.2%;
+}
+
+.slider .thumbnails > li:active {
+    opacity: 1;
+}
+
+.slider .thumbnails > li > a {
+	display: block;
+}
+.slider .thumbnails > li > a > img {
+	width: 100%;
+	height: auto;
+}
+
+.slider .slides li:target {
+	z-index: 3;
+	-webkit-animation: slide 1s 1;
+}
+.slider .slides li:not(:target) {
+	-webkit-animation: hidden 1s 1;
+}
+@-webkit-keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@-webkit-keyframes hidden {
+	0% {
+		z-index: 2;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 2;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+@keyframes hidden {
+	0% {
+		z-index: 2;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 2;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+
+
 // main
 
 .container {
@@ -105,8 +222,8 @@ a {
     grid-template-columns: 0.7fr 2fr;
     gap: 5%;
     justify-self: start;
-    margin-bottom: 8rem;
-    min-width: 320px;
+    margin-bottom: 6rem;
+    width: 320px;
 }
 
 .pointer-back__img {
@@ -116,6 +233,9 @@ a {
 .link_back {
     align-self: center;
 }
+
+
+
 
 // карточки
 
@@ -144,6 +264,10 @@ a {
     grid-row: 1/2;
     grid-column: 1/3;    
 }
+
+
+
+
 
 .title_h2 {
     color: $Black;
@@ -219,6 +343,8 @@ a {
     line-height: 44px;
 }
 
+
+
 // форма
 
 .main-form {
@@ -281,7 +407,10 @@ a {
 
 .form_checkbox {
     text-align: start;
-    margin-bottom: 36px;
+    margin-bottom: 36px;   
+}
+
+.checkbox__label {
     font-family: Noah-Regular;
     font-weight: 400;
     font-size: 16px;
@@ -298,6 +427,7 @@ a {
     border: 1px solid $White;
     background-color: $HakiDark;
     color: $White;
+    cursor: pointer;
 }
 
 .btn-form:hover {
@@ -307,7 +437,95 @@ a {
 
 
 // футер
+// верхняя часть
 
+.another-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2%;    
+}
+
+.another-project {
+    display: grid;
+    grid-template-columns: 3fr 0.4fr;
+    grid-template-rows: 0.8fr 1fr; 
+    position: relative;
+    margin: 44px 56px 60px 56px;
+    text-align: center;
+}
+
+.project_preview {    
+    background: url(/assets/images/project/preview_project.png) no-repeat transparent;
+}
+
+.project_next {
+    background: url(/assets/images/project/next_project.png) no-repeat transparent;
+}
+
+.another-project__h3 { 
+    grid-column: 1/2;
+    grid-row: 1/2;     
+    color: $White;
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 44px;
+}
+
+.another-project__name {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    color: $White;
+}
+
+.another-project__pointer {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    align-self: start;
+    justify-self: end;
+    width: 84px;
+    height: 38px;    
+    background: url(/assets/images/project/preview_project_pointer.png) right center no-repeat transparent;
+    background-size: contain;
+}
+
+.another-project_next {
+    grid-template-columns: 0.4fr 3fr;
+    grid-template-rows: 0.8fr 1fr; 
+}
+
+.another-project__h3_next {
+    grid-column: 2/2;
+    grid-row: 1/2; 
+}
+
+.another-project__name_next {
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+.another-project__pointer_next {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    justify-self: start;
+    background: url(/assets/images/project/next_project_pointer.png) no-repeat transparent;    
+}
+
+// ссылка на всю карточку
+
+.another-project__pointer::before {
+    content: '';
+    position: absolute;
+    display: block;    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+// общий футер
 .footer {
     display: grid;
     grid-template-columns: 35% 1fr 20%;
@@ -350,4 +568,134 @@ a {
     font-family: Noah-Regular;
     font-size: 9pt;
     color: $White;
+}
+
+
+
+/* Adapptive phone */
+
+
+@media screen and (max-width: 375px) {
+    .container {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+
+    // кнопка назад
+    .link_main {
+        grid-template-columns: 0.2fr 2fr;
+        margin-bottom: 3rem;        
+} 
+.pointer-back {
+    align-self: center;
+}
+    .pointer-back__img {
+        width: 100%;    
+}
+.link_back {
+    visibility: hidden;    
+}
+.link_back::before {
+    content: 'Назад';
+    visibility: visible;    
+    font-size: 14px;
+}
+// карточки
+.card {
+    grid-template-columns: 1fr;
+    min-width: 375px;
+    justify-self: start;
+}
+
+.main-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-self: start;
+    min-height: 800px;
+    min-width: 375px;
+}
+
+.main-card__text {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1.5fr 1fr 1.5fr 40%;
+    margin: 0 auto;
+    max-width: 330px;
+}
+
+.card__img {
+    max-width: 375px;
+}
+
+.title_h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
+.text-24 {
+    font-size: 18px;
+    line-height: 24px;
+}
+.text-18 {
+    font-size: 16px;
+    line-height: 20px;
+}
+.card2__text_center {
+    margin: 0 auto;
+    max-width: 330px;    
+}
+.card2__text {    
+    font-size: 28px;
+    line-height: 34px;
+}
+.card__text {
+    margin: 0 auto;
+    max-width: 330px;
+}
+.card__img_4 {
+    grid-row: 2/3;
+}
+.main__text {
+    justify-self: start;
+    margin-left: 22px;
+    max-width: 330px;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+// footer
+.another-project {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 0.2fr;
+    margin: 8%;
+    align-content: center;
+}
+
+.another-project__h3 {
+    grid-row: 2/3;
+    font-size: 16px;
+    line-height: 20px;
+}
+.another-project__name {
+    grid-row: 3/3;
+}
+.another-project__pointer {
+    grid-row: 1/2;
+    grid-column: 1/3;   
+    background-size: 50%;
+}
+.another-project__h3_next {
+    grid-column: 1/2;     
+}
+
+.another-project__name_next {
+    grid-column: 1/2;
+    
+}
+.another-project__pointer_next {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;    
+}
 }
