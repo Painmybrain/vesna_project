@@ -2,16 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./assets/styles/normalize.css" />
     <link rel="stylesheet" href="./assets/styles/style_portfolio.css" />
     <link rel="stylesheet" href="./assets/styles/style_contacts.css" />
-
     <title>Контакты</title>
   </head>
   <body>
     <header class="header">
+      <!-- Логотип и навигация -->
       <img
         class="header__logo"
         src="/assets/images/header_footer/logo.svg"
@@ -22,37 +21,18 @@
         <a href="#" class="header__nav-menu">Портфолио</a>
         <a href="#" class="header__nav-menu">Услуги</a>
         <a href="#" class="header__nav-menu">Контакты</a>
-        <div class="header__hamburger" id="hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </nav>
       <div class="header__contact">
         <a href="tel:+79218888888" class="header__phone">+7 (921) 888 88 88</a>
-        <div class="form-container">
-          <!-- Содержимое формы -->
-        </div>
-        <!-- Ссылка для открытия модального окна -->
         <a href="#myModal" class="header__consulting"
           >Бесплатная консультация</a
         >
-        >
-        <!-- Модальное окно -->
         <div id="myModal" class="modal">
-          <div
-            class="modal-content"
-            style="
-              background-image: url('assets/images/consultation.png');
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-            "
-          >
-            <!-- Ссылка для закрытия модального окна -->
+          <div class="modal-content">
+            <div class="modal-content" style="background-image: url('assets/images/consultation.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+              <!-- Остальное содержимое модального окна -->
             <a href="#" class="close">&times;</a>
             <h2>Закажите<br />консультацию</h2>
-            <!-- Форма модального окна -->
             <p>Менеджер перезвонит Вам в ближайшее время</p>
             <input type="text" placeholder="Виктория Благовещенская" />
             <input type="tel" placeholder="+7(___)-___-___" />
@@ -60,21 +40,17 @@
               <div class="checkbox">
                 <input type="checkbox" id="consent-checkbox" />
               </div>
-              <div class="checkbox-label">
-                <label for="consent-checkbox"
-                  >Я даю согласие на обработку своих персональных данных</label
-                >
-              </div>
+              <label for="consent-checkbox"
+                >Я даю согласие на обработку своих персональных данных</label
+              >
             </div>
             <button>Перезвоните мне</button>
           </div>
         </div>
       </div>
-      <div class="header__words">
-        <h1 class="header__title">Контакты</h1>
-      </div>
     </header>
     <main class="main">
+      <!-- Основное содержимое страницы -->
       <div class="contact-container">
         <div class="contact-form">
           <h2>Свяжитесь с нами, чтобы проконсультироваться</h2>
@@ -107,6 +83,7 @@
           </form>
         </div>
         <div class="contact-info">
+          <!-- Контактная информация -->
           <div class="info-item">
             <img
               src="assets/images/contacts/Group 256.png"
@@ -137,6 +114,7 @@
       </div>
     </main>
     <footer class="footer">
+      <!-- Подвал сайта -->
       <div class="footer__contacts">
         <div class="footer__phone">+7(921) 888 88 88</div>
         <div class="footer__email">info@vesna.ru</div>
@@ -160,6 +138,6 @@
         <div class="footer__confidential">Политика конфиденциальности</div>
       </div>
     </footer>
-    <script src="./contacts.js"></script>
   </body>
 </html>
+

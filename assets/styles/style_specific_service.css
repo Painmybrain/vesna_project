@@ -244,10 +244,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  justify-items: center;
+  grid-template-columns: 90% 10%;
   align-items: center;
-  align-content: center;
-  gap: 1rem;
+  justify-items: center;
+  padding-left: 15%;
+  padding-right: 5%;
 }
 
 .next__service {
@@ -255,10 +256,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  justify-items: center;
+  grid-template-columns: 10% 90%;
   align-items: center;
-  align-content: center;
+  justify-items: center;
   gap: 1rem;
+  padding-right: 15%;
+  padding-left: 5%;
 }
 
 .service__text {
@@ -280,9 +283,78 @@
 .service__link1 {
   width: 6rem;
   height: 3rem;
-  background: url(../images/specific_service/arrow_prev.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.service__link2 {
+  width: 6rem;
+  height: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 1440px;
+  min-height: 644px;
+  margin-bottom: 5rem;
+  justify-items: center;
+  align-content: center;
+  align-items: stretch;
+}
+
+.contact-container h3 {
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.contact-container h5,
+.contact-container a,
+.contact__form {
+  color: rgb(26, 26, 24);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.contact-info {
+  display: grid;
+  width: 513px;
+}
+
+.info-item {
+  display: grid;
+}
+
+.contact__form {
+  width: 660px;
+  height: 490px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact_button {
+  display: grid;
+  justify-items: end;
+}
+
+.contact_button button {
+  width: 312px;
+  height: 60px;
+  background-color: rgb(84, 90, 47);
+  color: rgb(255, 255, 255);
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  border: transparent;
 }
 
 .footer {
