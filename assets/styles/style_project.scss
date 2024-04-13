@@ -475,7 +475,7 @@ a {
     justify-self: end;
     width: 84px;
     height: 38px;    
-    background: url(/assets/images/project/preview_project_pointer.png) right center no-repeat transparent;
+    background: url(/assets/images/project/preview_project_pointer.png) right no-repeat transparent;
     background-size: contain;
 }
 
@@ -498,7 +498,7 @@ a {
     grid-column: 1/2;
     grid-row: 2/2;
     justify-self: start;
-    background: url(/assets/images/project/next_project_pointer.png) no-repeat transparent;    
+    background: url(/assets/images/project/next_project_pointer.png) left center no-repeat transparent;    
 }
 
 // ссылка на всю карточку
@@ -560,11 +560,9 @@ a {
 }
 
 
-
 /* Adapptive phone */
 
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
     // слайдер
     .slider .slides {        
         height: 430px;       
@@ -578,7 +576,6 @@ a {
         height: 100%;
         margin-left: -30%;        
     }
-
     .slider .thumbnails {
         display: flex;
         overflow-y: scroll;
@@ -734,13 +731,82 @@ a {
 }
 
     .another-project__name_next {
-    grid-column: 1/2;
-    
+    grid-column: 1/2;    
 }
     .another-project__pointer_next {
     grid-column: 1/2;
-    grid-row: 1/2;
-    
+    grid-row: 1/2;    
     background-size: 50%;    
+}
+
+// общий футер
+.footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;    
+}
+.footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+}
+.footer__phone {
+    font-size: 20px;
+}
+.footer__email {
+    font-size: 20px;
+}
+.footer__copyright {
+    display: none;
+}
+.footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+}
+.footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+}
+.footer__instagram {
+    padding: 0;
+    text-align: center;
+}
+.footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+}
+.footer__confidential::after {
+    content: '© 2021 VESNA';
+    display: block;
+    padding-top: 0.5rem;   
+    font-size: 16px;
+}
+// круглая кнопка
+.footer__socialmedia::before {
+    content: 'Наверх';
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 50px 36px;    
+    background-color: $HakiLight;
+    background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat $HakiLight ;
+    border-radius: 50%;
+    color: $White;
+    font-size: 14px;
 }
 }

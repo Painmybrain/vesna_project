@@ -231,6 +231,64 @@ $White: rgba(255, 255, 255, 1);
     text-align: center;
 }
 
+// КОНТАКТЫ
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1440px;
+    max-height: 644px;
+    margin-bottom: 5rem;
+    justify-items: center;
+    align-content: center;
+    align-items: stretch;
+}
+.contact-container h3 {
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+}
+.contact-container h5,
+.contact-container a,
+.contact__form {
+    color: $Black;
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.contact-info {
+    display: grid;
+    max-width: 513px;
+}
+.info-item {
+    display: grid;
+
+}
+.contact__form {
+    max-width: 660px;
+    height: 490px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr;
+    gap: 2rem;
+}
+.contact_button {
+    display: grid;
+    justify-items: end;
+}
+.contact_button button {
+    width: 312px;
+    height: 60px;
+    background-color: $HakiDark;
+    color: $White;
+    font-family: Noah-Regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    border: transparent;
+}
+
 // 
 .services__navigation {
     width: 100%;
@@ -277,79 +335,17 @@ $White: rgba(255, 255, 255, 1);
     line-height: 72px;
 }
 .service__link1 {
-    width: 6rem;
+    max-width: 6rem;
     height: 3rem;
     background-repeat: no-repeat;
     background-position: center;
 }
 .service__link2 {
-    width: 6rem;
+    max-width: 6rem;
     height: 3rem;
     background-repeat: no-repeat;
     background-position: center;
 }
-
-// КОНТАКТЫ
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-width: 1440px;
-    min-height: 644px;
-    margin-bottom: 5rem;
-    justify-items: center;
-    align-content: center;
-    align-items: stretch;
-}
-.contact-container h3 {
-    font-family: Noah-Regular;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 60px;
-}
-.contact-container h5,
-.contact-container a,
-.contact__form {
-    color: $Black;
-    font-family: Noah-Regular;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    text-decoration: none;
-}
-.contact-info {
-    display: grid;
-    width: 513px;
-}
-.info-item {
-    display: grid;
-
-}
-
-
-.contact__form {
-    width: 660px;
-    height: 490px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr;
-    gap: 2rem;
-}
-.contact_button {
-    display: grid;
-    justify-items: end;
-}
-.contact_button button {
-    width: 312px;
-    height: 60px;
-    background-color: $HakiDark;
-    color: $White;
-    font-family: Noah-Regular;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    border: transparent;
-}
-
-
 
 // футер
 .footer {
@@ -394,4 +390,345 @@ $White: rgba(255, 255, 255, 1);
     font-family: Noah-Regular;
     font-size: 9pt;
     color: $White;
+}
+
+
+
+
+// АДАПТИВ мобильная версия
+@media screen and (max-width: 376px) {
+    .header {
+        height: 25rem;
+        margin-bottom: 3rem;
+    }
+    .header__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .header__text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .header__contact {
+        display: none;
+    }
+    // кнопка назад
+    
+    .main__button {
+        background-image: url(../images/specific_service/button_arrow.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        max-width: none;
+        width: 375px;
+        height: 2rem;
+        display: grid;
+        align-items: center;
+        justify-items: start;
+        justify-content: start;
+        align-content: center;
+        margin-bottom: 3rem;
+    }
+    .main__button a {
+        padding-left: 6rem;
+        color: $Black;
+        font-family: Noah-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-decoration: none;
+        // padding-left: 1rem;
+    }
+
+    // Галерея 1
+.main__galery1 {
+    max-width: none;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "galery1__words"
+        "galery1__image";
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+.galery1__image {
+    grid-area: galery1__image;
+    max-width: none;
+    width: 100%;
+    img {
+        width: 375px;
+    }
+}
+.galery1__words {
+    grid-area: galery1__words;
+    max-width: none;
+    width: 100%;
+    display: grid;
+    justify-items: start;
+    align-content: center;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.galery1__title {
+    font-size: 24px;
+    line-height: 30px;
+}
+.galery1__text {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+// галерея 2
+.main__galery2 {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.galery__text {
+    max-width: none;
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    gap: 1rem;
+}
+.text__h4 {
+    font-size: 24px;
+    line-height: 30px;
+}
+.galery__images2 {
+    max-width: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    img {
+        width: 375px;
+    }
+}
+.galery2_img2,
+.galery2_img3,
+.galery2_img4,
+.galery2_img5 {
+    display: none;
+}
+// story
+.main__story {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+.title__h2 {
+    max-width: none;
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+}
+.text__h5 {
+    max-width: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+// КОНТАКТЫ
+.contact-container {
+    grid-template-columns: 1fr;
+    max-width: none;
+    width: 100%;
+    max-height: 644px;
+    margin-bottom: 5rem;
+    justify-items: center;
+    align-content: center;
+    align-items: stretch;
+}
+
+.contact-container h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+.contact-container h5,
+.contact-container a,
+.contact__form {
+    font-size: 18px;
+    line-height: 22px;
+}
+.contact-info {
+    max-width: none;
+    width: 100%;
+}
+.info-item h5,
+.info-item a {
+    display: none;
+}
+.contact__form {
+    max-width: none;
+    width: 100%;
+    height: 490px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr;
+    gap: 1rem;
+    // margin-left: -2rem;
+}
+.contact_button {
+    justify-items: center;
+}
+.contact_button button {
+    max-width: none;
+    width: 374px;
+}
+
+
+
+
+// картинки со стрелками
+.services__navigation {
+    width: 375px;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-left: -2rem;
+}
+.previous__service {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "service__link1"
+    "service__words1";
+    align-items: start;
+    padding-top: 0.5rem;
+    justify-items: center;
+    gap: 0rem;
+    padding-right: 0;
+    padding-left: 0;
+}
+.next__service {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+    padding-top: 0.5rem;
+    justify-items: center;
+    gap: 0rem;
+    padding-right: 0;
+    padding-left: 0;
+}
+.service__text {
+    font-size: 14px;
+    line-height: 18px;
+}
+.service__title {
+    font-size: 16px;
+    line-height: 20px;
+}
+.service__link1 {
+    grid-area: service__link1;
+}
+.service__words1 {
+    grid-area: service__words1;
+}
+.service__link1 {
+    max-width: 6rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.service__link2 {
+    max-width: 6rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // общий футер
+.footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;    
+}
+.footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+}
+.footer__phone {
+    font-size: 20px;
+}
+.footer__email {
+    font-size: 20px;
+}
+.footer__copyright {
+    display: none;
+}
+.footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+}
+.footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+}
+.footer__instagram {
+    padding: 0;
+    text-align: center;
+}
+.footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+}
+.footer__confidential::after {
+    content: '© 2021 VESNA';
+    display: block;
+    padding-top: 0.5rem;   
+    font-size: 16px;
+}
+// круглая кнопка
+.footer__socialmedia::before {
+    content: 'Наверх';
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 50px 36px;    
+    background-color: $HakiLight;
+    background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat $HakiLight ;
+    border-radius: 50%;
+    color: $White;
+    font-size: 14px;
+}
+
 }

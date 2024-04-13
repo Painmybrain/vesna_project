@@ -111,11 +111,14 @@ $White: rgba(255, 255, 255, 1);
     display: grid;
     justify-items: center;
 }
+.main__button {
+    display: none;
+}
 .main__galery1,
 .main__galery2,
 .main__galery3 {
-    min-width: 1336px;
-    min-height: 1080px;
+    max-width: 1336px;
+    max-height: 1080px;
     margin-bottom: 10rem;
 }
 .galery__title {
@@ -259,15 +262,23 @@ $White: rgba(255, 255, 255, 1);
     line-height: 30px;
     border: transparent;
 }
-
+.galery__button button :hover {
+    background-color: $HakiLight;
+}
 // Как выбрать растения для сада? 
 // Инструкция
 .instruction {
     width: 100%;
-    background-image: url(../images/portfolio/instruction/1.png);
-    background-repeat: no-repeat;
-    background-position: left 5% bottom 10%;
+    // background-image: url(../images/portfolio/instruction/1.png);
+    // background-repeat: no-repeat;
+    // background-position: left 5% bottom 10%;
 }
+.instruction__img {
+    position: absolute;
+    left: 5rem;
+    top: 268rem;
+}
+
 .instruction__box {
     width: 100%;
 }
@@ -379,3 +390,245 @@ $White: rgba(255, 255, 255, 1);
     font-size: 9pt;
     color: $White;
 }
+
+// АДАПТИВ мобильная версия
+@media screen and (max-width: 376px) {
+    .header {
+        height: 25rem;
+        margin-bottom: 3rem;
+    }
+    .header__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .header__text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .header__contact {
+        display: none;
+    }
+    // кнопка назад
+    .main__button {
+        background-image: url(../images/specific_service/button_arrow.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        width: 100%;
+        height: 2rem;
+        display: grid;
+        align-items: center;
+        justify-items: start;
+        justify-content: start;
+        align-content: center;
+        margin-bottom: 3rem;
+        margin-left: 2rem;
+    }
+    .main__button a {
+        padding-left: 6rem;
+        color: $Black;
+        font-family: Noah-Regular;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-decoration: none;
+    }
+    // текст галереи
+    .galery__title {
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+    }
+    .title__h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .galery__text {
+        width: 100%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        gap: 1rem;
+    }
+    .text__h6 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .text__h5 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .text1, .text2, text3 {
+        display: grid;
+        gap: 0.5rem;
+}
+.main__galery1, .main__galery2, .main__galery3 {
+    max-width: 100%;
+    min-height: 0px;
+    margin-bottom: 5rem;
+}
+.galery__images1,
+.galery__images2,
+.galery__images3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 2rem;
+    gap: 0rem;
+}
+.galery1_img2,
+.galery1_img3,
+.galery1_img4,
+.galery1_img5,
+.galery2_img2,
+.galery2_img3,
+.galery2_img4,
+.galery2_img5,
+.galery3_img2,
+.galery3_img3,
+.galery3_img4,
+.galery3_img5 {
+    display: none;
+}
+.galery__button {
+    width: 374px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.galery__button button {
+    width: 374px;
+}
+.instruction {
+    width: 100%;
+    display: grid;
+    // margin-left: -70%;
+    grid-template-columns: 1fr;
+}
+.instruction__img,
+.instr__pic {
+    display: none;
+}
+
+.instruction__box {
+    width: 374px;
+}
+.instruction__form {
+    width: 100%;
+    min-height: 22rem;
+    background-color: rgba(153, 161, 142, 0.3);
+    margin-bottom: 5rem;
+    display: grid;
+    align-content: center;
+}
+.instruction__form form {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 0%;
+}
+.instruction__title {
+    display: grid;
+    justify-items: center;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+}
+.instruction__title h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+.form__title {
+    font-size: 18px;
+    line-height: 22px;
+}
+.instruction__form button {
+    width: 100%;
+    height: 60px;
+}
+.instruction__form input {
+    font-size: 18px;
+    line-height: 22px;
+}
+.email {
+    width: 100%;
+    height: 50px;
+    padding-left: 2rem;
+}
+.checkbox {
+    padding-left: 2rem;
+}
+
+
+// общий футер
+.footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;    
+}
+.footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+}
+.footer__phone {
+    font-size: 20px;
+}
+.footer__email {
+    font-size: 20px;
+}
+.footer__copyright {
+    display: none;
+}
+.footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+}
+.footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+}
+.footer__instagram {
+    padding: 0;
+    text-align: center;
+}
+.footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+}
+.footer__confidential::after {
+    content: '© 2021 VESNA';
+    display: block;
+    padding-top: 0.5rem;   
+    font-size: 16px;
+}
+// круглая кнопка
+.footer__socialmedia::before {
+    content: 'Наверх';
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 50px 36px;    
+    background-color: $HakiLight;
+    background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat $HakiLight ;
+    border-radius: 50%;
+    color: $White;
+    font-size: 14px;
+}
+    }

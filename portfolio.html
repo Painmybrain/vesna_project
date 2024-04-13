@@ -16,10 +16,10 @@
         alt="Logo"
       />
       <nav class="header__nav">
-        <a href="#" class="header__nav-menu">Главная</a>
-        <a href="#" class="header__nav-menu">Портфолио</a>
-        <a href="#" class="header__nav-menu">Услуги</a>
-        <a href="#" class="header__nav-menu">Контакты</a>
+        <a href="http://127.0.0.1:5500/index.html" class="header__nav-menu">Главная</a>
+        <a href="http://127.0.0.1:5500/portfolio.html" class="header__nav-menu">Портфолио</a>
+        <a href="http://127.0.0.1:5500/services.html#order" class="header__nav-menu">Услуги</a>
+        <a href="http://127.0.0.1:5500/contacts.html" class="header__nav-menu">Контакты</a>
       </nav>
       <div class="header__contact">
         <div class="header__phone">+7 (921) 888 88 88</div>
@@ -31,18 +31,28 @@
       </div>
     </header>
     <main class="main">
+      <div class="main__button">
+        <a href="http://127.0.0.1:5500/index.html">Назад</a>
+      </div>
       <div class="main__galery1">
         <div class="galery__title">
           <h2 class="title__h2">Lorem ipsum</h2>
         </div>
         <div class="galery__text">
-          <h6 class="text__h6">Реализация</h6>
-          <h6 class="text__h6">Площадь</h6>
-          <h6 class="text__h6">Месторасположение</h6>
-          <h5 class="text__h5">2018-2019</h5>
-          <h5 class="text__h5">35 соток</h5>
-          <h5 class="text__h5">Ленинградская область</h5>
+          <div class="text1">
+            <h6 class="text__h6">Реализация</h6>
+            <h5 class="text__h5">2018-2019</h5>
+          </div>
+          <div class="text2">
+            <h6 class="text__h6">Площадь</h6>
+            <h5 class="text__h5">35 соток</h5>
+          </div>
+          <div class="text3">
+            <h6 class="text__h6">Месторасположение</h6>
+            <h5 class="text__h5">Ленинградская область</h5>
+          </div>
         </div>
+
         <div class="galery__images1">
           <img
             class="galery1_img1"
@@ -80,12 +90,18 @@
           <h2 class="title__h2">Lorem ipsum</h2>
         </div>
         <div class="galery__text">
-          <h6 class="text__h6">Реализация</h6>
-          <h6 class="text__h6">Площадь</h6>
-          <h6 class="text__h6">Месторасположение</h6>
-          <h5 class="text__h5">2018-2019</h5>
-          <h5 class="text__h5">35 соток</h5>
-          <h5 class="text__h5">Ленинградская область</h5>
+          <div class="text1">
+            <h6 class="text__h6">Реализация</h6>
+            <h5 class="text__h5">2018-2019</h5>
+          </div>
+          <div class="text2">
+            <h6 class="text__h6">Площадь</h6>
+            <h5 class="text__h5">35 соток</h5>
+          </div>
+          <div class="text3">
+            <h6 class="text__h6">Месторасположение</h6>
+            <h5 class="text__h5">Ленинградская область</h5>
+          </div>
         </div>
         <div class="galery__images2">
           <img
@@ -124,12 +140,18 @@
           <h2 class="title__h2">Lorem ipsum</h2>
         </div>
         <div class="galery__text">
-          <h6 class="text__h6">Реализация</h6>
-          <h6 class="text__h6">Площадь</h6>
-          <h6 class="text__h6">Месторасположение</h6>
-          <h5 class="text__h5">2018-2019</h5>
-          <h5 class="text__h5">35 соток</h5>
-          <h5 class="text__h5">Ленинградская область</h5>
+          <div class="text1">
+            <h6 class="text__h6">Реализация</h6>
+            <h5 class="text__h5">2018-2019</h5>
+          </div>
+          <div class="text2">
+            <h6 class="text__h6">Площадь</h6>
+            <h5 class="text__h5">35 соток</h5>
+          </div>
+          <div class="text3">
+            <h6 class="text__h6">Месторасположение</h6>
+            <h5 class="text__h5">Ленинградская область</h5>
+          </div>
         </div>
         <div class="galery__images3">
           <img
@@ -164,13 +186,12 @@
       </div>
 
       <div class="instruction">
-        <!-- <div class="instruction__img">
-          <img src="./assets/images/portfolio/instruction/1.png" alt="Журнал" />
-        </div> -->
+        <div class="instruction__img">
+          <img src="./assets/images/portfolio/instruction/1.png" alt="Журнал" class="instr__pic"/>
+        </div>
         <div class="instruction__box">
           <div class="instruction__title"><h2 >
-            Как выбрать растения <br />
-            для сада?</div>
+            Как выбрать растения для сада?</div>
           </h2>
           <div class="instruction__form">
             <form action="" method="post">
@@ -182,7 +203,7 @@
                 id=""
                 value="Ваш Email"
               />
-              <div>
+              <div class="checkbox">
                 <input type="checkbox" name="" id="" /> Я даю согласие на
                 обработку своих персональных данных
               </div>

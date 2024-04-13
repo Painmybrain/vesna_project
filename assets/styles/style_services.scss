@@ -23,7 +23,7 @@ $White: rgba(255, 255, 255, 1);
   padding: 0;
   box-sizing: border-box;
 }
-// header
+// Хедер
 .header {
   justify-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@ $White: rgba(255, 255, 255, 1);
 }
 .header__logo {
   padding-left: 4rem;
-} /*логопотип в header слева*/
+} /*логопотип*/
 
 .header__nav {
   padding-top: 3rem;
@@ -115,6 +115,7 @@ $White: rgba(255, 255, 255, 1);
   text-decoration: underline 1px solid $White;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 // Основная
 .main {
   display: grid;
@@ -126,9 +127,33 @@ $White: rgba(255, 255, 255, 1);
   max-height: 562px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   margin-bottom: 10rem;
-  gap: 5rem;
+  gap: 6rem;
 }
+
+#main_services1 div,
+#main_services3 div {
+  grid-column: 1 / 2;
+}
+
+#main_services1 img,
+#main_services3 img {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+#main_services2 div,
+#main_services4 div {
+  grid-column: 2 / 3;
+}
+
+#main_services2 img,
+#main_services4 img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
 .services__examples {
   display: grid;
   justify-items: start;
@@ -150,10 +175,16 @@ $White: rgba(255, 255, 255, 1);
   line-height: 30px;
 }
 
-.services__more {
+.services__more__box {
   width: 18vw;
-  text-align: center;
+  height: 7vh;
   border: 2px solid $HakiDark;
+  text-align: center;
+}
+
+.services__more {
+  padding: 1em 4em;
+  text-align: center;
   text-decoration: none;
   color: $Black;
   font-family: Noah-Regular;
@@ -164,6 +195,65 @@ $White: rgba(255, 255, 255, 1);
 
 .services__more:hover {
   text-decoration: underline 2px solid $HakiDark;
+}
+
+// Сделать заказ
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 1440px;
+  min-height: 644px;
+  margin-bottom: 5rem;
+  justify-items: center;
+  align-content: center;
+  align-items: stretch;
+}
+.contact-container h3 {
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+}
+.contact-container h5,
+.contact-container a,
+.contact__form {
+  color: $Black;
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: none;
+}
+.contact-info {
+  display: grid;
+  width: 513px;
+}
+.info-item {
+  display: grid;
+}
+
+.contact__form {
+  width: 660px;
+  height: 490px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr;
+  gap: 2rem;
+}
+.contact_button {
+  display: grid;
+  justify-items: end;
+}
+.contact_button button {
+  width: 312px;
+  height: 60px;
+  background-color: $HakiDark;
+  color: $White;
+  font-family: Noah-Regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  border: transparent;
 }
 
 // Футер
@@ -209,4 +299,240 @@ $White: rgba(255, 255, 255, 1);
   font-family: Noah-Regular;
   font-size: 9pt;
   color: $White;
+}
+
+// круглая кнопка
+.button_up {
+  position: fixed;
+  right: 1rem;
+  bottom: 3rem;
+  padding: 50px 36px;
+  background-color: $HakiLight;
+  background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat
+    $HakiLight;
+  border-radius: 50%;
+  opacity: 80%;
+  color: $White;
+  text-decoration: none;
+  font-family: Noah-Regular;
+  font-size: 18px;
+}
+
+// Адаптивная вёрстка
+
+@media screen and (max-width: 376px) {
+  .header {
+    grid-template-columns: 1fr 50% 20%;
+    background-image: url(../images/services/main_foto_phone.png);
+    height: 25rem;
+    padding-top: 1rem;
+    margin-bottom: -4rem;
+  }
+
+  .header__logo {
+    width: 25vw;
+    padding: 0;
+  }
+
+  .header__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 5vh;
+    padding-top: 1.3rem;
+    margin-left: 2.5rem;
+  }
+
+  .header__nav-menu {
+    padding: 0;
+    margin-left: 1em;
+    font-size: 10pt;
+  }
+
+  .header__contact {
+    display: none;
+  }
+
+  .header__words {
+    grid-template-rows: 65% 35%;
+  }
+
+  .header__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .header__order {
+    width: 97vw;
+  }
+
+  .main {
+    grid-template-columns: 100%;
+  }
+
+  .main__services {
+    grid-template-columns: 95%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 8em;
+  }
+
+  #main_services1 div,
+  #main_services3 div {
+    grid-column: 1;
+  }
+
+  #main_services1 img,
+  #main_services3 img {
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+
+  #main_services2 div,
+  #main_services4 div {
+    grid-column: 1;
+  }
+
+  #main_services2 img,
+  #main_services4 img {
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+
+  .services__examples {
+    align-content: start;
+    margin-left: 10vw;
+    gap: 5vh;
+    margin-bottom: -3em;
+  }
+
+  .services__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .services__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .services__image {
+    max-width: 375px;
+    margin-bottom: -3rem;
+  }
+
+  .services__more__box {
+    width: 100%;
+    height: 9vh;
+    margin-left: 2.5vw;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    min-width: 375px;
+    min-height: auto;
+    margin-top: 5rem;
+    align-items: center;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .info-item h3 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .info-item h5,
+  .info-item a,
+  .info-item img {
+    display: none;
+  }
+
+  .contact__form {
+    width: 98%;
+    margin-left: 1vw;
+  }
+
+  .contact_button {
+    justify-items: center;
+  }
+
+  .contact_button button {
+    width: 97%;
+  }
+
+  .footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;
+  }
+  .footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+  }
+  .footer__phone {
+    font-size: 20px;
+  }
+  .footer__email {
+    font-size: 20px;
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+  }
+  .footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+  }
+  .footer__instagram {
+    padding: 0;
+    text-align: center;
+  }
+  .footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+  }
+  .footer__confidential::after {
+    content: "© 2021 VESNA";
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+  // круглая кнопка
+  .button_up {
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 30px 16px;
+    background-color: $HakiLight;
+    background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat
+      $HakiLight;
+    border-radius: 50%;
+    opacity: 80%;
+    color: $White;
+    text-decoration: none;
+    font-family: Noah-Regular;
+    font-size: 14px;
+  }
 }
