@@ -107,8 +107,8 @@
 .main__galery1,
 .main__galery2,
 .main__galery3 {
-  min-width: 1336px;
-  min-height: 1080px;
+  max-width: 1336px;
+  max-height: 1080px;
   margin-bottom: 10rem;
 }
 
@@ -282,7 +282,7 @@
 .instruction__img {
   position: absolute;
   left: 5rem;
-  top: 278rem;
+  top: 268rem;
 }
 
 .instruction__box {
@@ -453,7 +453,7 @@
   .main__galery1, .main__galery2, .main__galery3 {
     max-width: 375px;
     min-height: 0px;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .galery__images1,
   .galery__images2,
@@ -480,7 +480,7 @@
     display: none;
   }
   .galery__button {
-    width: 375px;
+    width: 374px;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -498,10 +498,10 @@
     display: none;
   }
   .instruction__box {
-    width: 375px;
+    width: 374px;
   }
   .instruction__form {
-    width: 375px;
+    width: 100%;
     min-height: 22rem;
     background-color: rgba(153, 161, 142, 0.3);
     margin-bottom: 5rem;
@@ -544,15 +544,74 @@
     padding-left: 2rem;
   }
   .body {
-    max-width: 100%;
+    width: 100%;
   }
   .footer {
-    display: grid;
-    grid-template-columns: 35% 1fr 20%;
-    grid-template-rows: 1fr;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 2px;
-    width: 375px;
-    height: 14rem;
-    background-color: #545A2F;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;
+  }
+  .footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+  }
+  .footer__phone {
+    font-size: 20px;
+  }
+  .footer__email {
+    font-size: 20px;
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+  }
+  .footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+  }
+  .footer__instagram {
+    padding: 0;
+    text-align: center;
+  }
+  .footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+  }
+  .footer__confidential::after {
+    content: "© 2021 VESNA";
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+  .footer__socialmedia::before {
+    content: "Наверх";
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 50px 36px;
+    background-color: rgb(153, 161, 142);
+    background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat rgb(153, 161, 142);
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style_portfolio.css.map */
