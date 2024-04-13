@@ -335,7 +335,17 @@ $White: rgba(255, 255, 255, 1);
   }
 
   .header__nav {
-    display: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 5vh;
+    padding-top: 1.3rem;
+    margin-left: 2.5rem;
+  }
+
+  .header__nav-menu {
+    padding: 0;
+    margin-left: 1em;
+    font-size: 10pt;
   }
 
   .header__contact {
