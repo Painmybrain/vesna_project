@@ -9,6 +9,7 @@
   </head>
   <body>
     <header class="header">
+      <div class="header__main">
       <img
         class="header__logo"
         src="/assets/images/header_footer/logo.svg"
@@ -20,16 +21,18 @@
         <a href="#" class="header__nav-menu">Услуги</a>
         <a href="#" class="header__nav-menu">Контакты</a>
       </nav>
+
       <div class="header__contact">
-        <div class="header__phone">+7 (921) 888 88 88</div>
+        <button type="submit" class="header__phone">+7 (921) 888 88 88</button>
         <p class="header__consulting">Бесплатная консультация</p>
+      </div>
       </div>
 
       <div class="header__pictures">
         <div class="header__text">
-          <p>Ландшафтная студия весна</p>
-          <h1>Создаем авторские ландшафты с вашим характером</h1>
-          <h2>От идеи до полной реализации</h2>
+          <p class="header__text-small">Ландшафтная студия Vesna</p>
+          <h1 class="header__main-title">Создаем авторские ландшафты с вашим характером</h1>
+          <h2 class="header__second-title">От идеи до полной реализации</h2>
         </div>
 
         <div class="header__background">
@@ -39,19 +42,34 @@
             alt="Leaves"
           />
         </div>
+        </div>
 
+        <div class="header__pictures-navigation">
         <div class="header__slider-wrapper">
           <div class="header__slider-project">
             <h3 class="header__slider-title">Последний проект</h3>
             <div class="header__slider-icon">
-              <img src="assets/images/main/arrow.svg" alt="Стрелочка">
+              <img src="assets/images/main/arrow.svg" alt="Стрелочка" class="slider-icon">
             </div>
             <a href="#!" class="header__slider-img">
-              <img src="assets/images/main/slider_project.svg" alt="Фото проекта">
+              <img src="assets/images/main/slider_project.svg" alt="Фото проекта" class="slider__project">
             </a>
           </div>
+          </div>
+
+          <div class="header__arrows">
+            <a href="#" class="arrows__left">
+              <img src="assets/images/main/left_arrow.svg" alt="Левая стрелочка">
+            </a>
+            <a href="#" class="arrows__right">
+              <img src="assets/images/main/right_arrow.svg" alt="Правая стрелочка">
+            </a>
+          </div>
+
+          <div class="arrows__pages">
+            <img src="assets/images/main/pages_numbers.svg" alt="Номера страниц" class="pages__numbers">
+          </div>
         </div>
-      </div>
     </header>
 
     <main>
@@ -67,9 +85,9 @@
             /> <!--левые листочки-->
           </div>
           <div class="main__explanation-text">
-            <h2>Создаем не просто красивый сад с картинки,</h2>
-            <h2>а место, куда захочется возвращаться</h2>
-            <p>
+            <h2 class="explanation-text__title">Создаем не просто красивый сад с картинки,</h2>
+            <h2 class="explanation-text__title2">а место, куда захочется возвращаться</h2>
+            <p class="explanation-text__about">
               От проекта до ухода за садом – один подрядчик. Мы несем
               ответственность за все этапы работ. Ваш сад будет органичен и
               выполнен в одном стиле. Мы делаем участок практичным, безопасным и

@@ -24,40 +24,45 @@ $White: rgba(255, 255, 255, 1);
     box-sizing: border-box;
 }
 
-.header {
-    display: grid;
-    grid-template-columns: 1fr 40% 20%;
-    grid-template-rows: 1fr;
-    gap: 2px;
-    width: 100%;
-    height: 98vh;
-    padding-top: 2rem;
-}
+/*Тут начинается header*/
 
 .header {
+    width: 100%;
+    height: 100vh;
     background-size:100% 100%;
     background-repeat:no-repeat;
     background-image: url("/assets/images/main/Rectangle101.png");
-} /*тут картинка под меню*/
+} /*тут фон под меню*/
+
+.header__main {
+    display: grid;
+    grid-template-columns: 1fr 40% 20%;
+    grid-template-rows: 1fr;
+    gap: 1%;
+    padding-top: 2%;
+} /*Обертка для меню навигации*/
 
 .header__logo {
-    padding-left: 4rem;
+    padding-left: 12%;
 } /*логопотип в header слева*/
 
 .header__nav {
-    padding-top: 3rem;
+    width: 95%;
+    height: 20vh;
+    padding-top: 9%;
+    padding-left: 3%;
     font-family: Noah-Regular;
 } /*меню*/
 
 .header__nav-menu{
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
     font-size: 14pt;
     text-decoration: none;
     color: $White;
-}
+} /*кнопочки меню*/
 
 .header__nav a:hover {
     border-bottom: 1px solid $White;
@@ -65,45 +70,138 @@ $White: rgba(255, 255, 255, 1);
 } /*подчеркивание под пунктами меню при наведении*/
 
 .header__contact {
-    padding-top: 1rem;
+    width: 85%;
+    height: 20vh;
+    padding-top: 7%;
     font-family: Noah-Regular;
-}
+} /*Кнопочка контакта*/
 
 .header__consulting {
-    padding-top: 0.5rem;
-    padding-left: 1.2rem;
-    font-size: 11pt;
+    padding-top: 2%;
+    padding-left: 4%;
+    font-family: Noah-Bold;
+    font-size: 12pt;
     color: $White;
-}
+} /*Фраза в кнопочке контакта*/
 
 .header__phone {
-    width: 13rem;
-    height: 3.75rem;
-    padding-top: 1.3rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    width: 75%;
+    height: 7vh;
+    padding-top: 3%;
+    padding-right: 7%;
+    padding-left: 7%;
     font-size: 14pt;
     background-color: $White;
+} /*Сам телефон*/
+
+.header__phone:hover {
+    color: $White;
+    background-color: $HakiDark;
 }
 
 .header__pictures {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 100%;
-    gap: 2rem;
-    border: 1px solid white;
-}
+    grid-template-rows: 1fr;
+} /*Тут у нас обертка части заглавия страницы и листочов справа + слайды */
 
 .header__text {
-    color:$White;
-    border: 1px solid white;
+    padding-top: 10%;
+    padding-left: 30%;
+    color: $White;
+} /*Обертка текста на странице*/
+
+.header__text-small {
+    font-family: Noah-Regular;
+    font-size: 14pt;
+    font-weight: 100;
+} /*К надписи "Ландшафтная студия весна"*/
+
+.header__main-title {
+    width: 45vw;
+    font-family: Noah-Bold;
+    font-size: 37pt;
+} /*самое главное заглавие*/
+
+.header__second-title {
+    font-family: Noah-Regular;
+    font-size: 25pt;
+    font-weight: 100;
 }
 
+.header__background {
+    padding-top: 1%;
+    padding-left: 41%;
+} /*Обертка листочков*/
+
 .header__leaves {
-    width: 31rem;
-    height: 23rem;
-    border: 1px solid white;
+    width: 100%;
+    height: 45vh;
+    padding-left: 15%;
+} /*Листочки справа*/
+
+.header__pictures-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 3%;
+} /*Нижняя часть с навигацией слайда картинок*/
+
+/*Левая часть*/
+.header__slider-wrapper {
+    padding-top: 12%;
+    padding-left: 45%;
+}
+.header__slider-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 13vh;
+    color: $White;
+    background-color: rgb(99, 83, 62, 0.4);
+}
+
+.header__slider-title {
+    width: 10%;
+    padding-top: 30%;
+    padding-left: 17%;
+    font-family: Noah-Regular;
+    font-size: 13pt;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.header__slider-icon {
+    padding-top: 45%;
+    padding-left: 29%;
+}
+
+.slider-icon {
+    width: 25%;
+}
+
+.slider__project {
+    width: 75%;
+    padding-top: 20%;
+}
+
+
+/*Стрелочки*/
+.header__arrows {
+    padding-top: 19%;
+    padding-left: 50%;
+}
+
+.arrows__left {
+    padding-right: 35%;
+    text-decoration: none;
+}
+
+/*Отсюда начинаются стили для цифрового слайда*/
+.arrows__pages {
+    padding-top: 19%;
+    padding-left: 23%;
 }
 
 .main__explanation-leaves {
@@ -124,7 +222,30 @@ $White: rgba(255, 255, 255, 1);
 
 .main__explanation-text {
     padding-top: 15%;
+    padding-bottom: 1%;
     text-align: center;
+}
+
+.explanation-text__title {
+    font-family: Noah-Regular;
+    font-size: 24pt;
+    font-weight: 100;
+}
+
+.explanation-text__title2 {
+    font-family: Noah-Bold;
+    font-size: 22pt;
+}
+
+.explanation-text__about {
+    // width: 45%;
+    // height: 85%;
+    padding-top: 5%;
+    padding-left: 27%;
+    padding-right: 27%;
+    font-family: Noah-Regular;
+    font-size: 14pt;
+    border: 1px solid red;
 }
 
 .main__examples {
