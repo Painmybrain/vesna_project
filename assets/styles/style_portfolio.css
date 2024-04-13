@@ -411,7 +411,7 @@
   color: rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 376px) {
   .header {
     height: 25rem;
     margin-bottom: 3rem;
@@ -459,7 +459,7 @@
     line-height: 30px;
   }
   .galery__text {
-    width: 374px;
+    width: 100%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-bottom: 1rem;
@@ -479,14 +479,14 @@
     gap: 0.5rem;
   }
   .main__galery1, .main__galery2, .main__galery3 {
-    max-width: 375px;
+    max-width: 100%;
     min-height: 0px;
     margin-bottom: 5rem;
   }
   .galery__images1,
   .galery__images2,
   .galery__images3 {
-    width: 375px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
