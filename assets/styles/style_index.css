@@ -23,9 +23,10 @@
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url("/assets/images/main/Rectangle101.png");
+  background-position: center center;
+  background-attachment: fixed;
 } /*тут фон под меню*/
 .header__main {
   display: grid;
@@ -174,7 +175,8 @@
 
 /*Стрелочки*/
 .header__arrows {
-  padding-top: 19%;
+  width: 100%;
+  padding-top: 30%;
   padding-left: 50%;
 }
 
@@ -187,6 +189,10 @@
 .arrows__pages {
   padding-top: 19%;
   padding-left: 23%;
+}
+
+.pages__numbers {
+  padding-top: 15%;
 }
 
 /*Main part*/
