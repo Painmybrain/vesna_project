@@ -295,60 +295,292 @@ button {
   margin-bottom: 15px;
 }
 /* Стили для всех устройств */
-.burger {
-  display: none; /* Скрытие иконки бургера на десктопе */
-  cursor: pointer;
-  font-size: 28px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
+header {
+	display: flex;
+	justify-content: flex-end;
 }
-
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+}
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #222222;
+	transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+/* Меню, которое будет появляться */
 .menu {
-  display: none; /* Меню*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+  background: #FFEFBA;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+}
+.menu.active {
+	transform: translateX(0);
+}
+.menu li {
+	list-style-type: none;
 }
 
-@media (max-width: 768px) {
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
+
+/* Отобразить бургер на мобильных устройствах */
+.menu-btn {
+  display: none; /* Изначально скрываем бургер */
+}
+
+/* Отображаем бургер только на мобильных устройствах */
+@media (max-width: 412px) {
+  .menu-btn {
+    display: block; /* Показываем бургер на мобильных устройствах */
+    width: 40px; /* Пример ширины */
+    height: 40px; /* Пример высоты */
+    background-color: rgb(255, 255, 255); /* Пример цвета фона */
+    /* Дополнительные стили для бургер кнопки на мобильных устройствах */
+  }
+}
+
+.menu-btn{
+  display: none;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+ 
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+ 
+.menubox{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+ 
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu-item:hover {
+  background-color: #CFD8DC;
+}
+ 
+ 
+#menu-toggle{
+  opacity: 0;
+}
+ 
+#menu-toggle:checked ~ .menu-btn > span{
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox{
+  visibility: visible;
+  left: 0;
+}
+
+@media (max-width: 412px) {
   .header__nav, .header__contact {
     display: none; /* Скрываем навигацию и контактную информацию */
-  }
-
-  .burger-checkbox {
-    display: block; /* Показываем чекбокс (по умолчанию скрыт) */
-    position: absolute;
-    top: 20px; /* Регулируем, если необходимо */
-    right: 20px; /* Регулируем, если необходимо */
-    width: 40px; /* Ширина бургера */
-    height: 25px; /* Высота бургера */
-    opacity: 0; /* Чекбокс не виден, но функционален */
-    z-index: 3; /* Чекбокс должен быть над бургером, чтобы можно было кликнуть */
-  }
-
-  .burger {
-    display: block; /* Показываем иконку бургер-меню */
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-  }
-
-  .menu-list {
-    display: none; /* Скрываем меню, пока не активирован чекбокс */
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: white; /* Вы можете выбрать другой цвет фона */
-    width: 300px; /* Или другая ширина, в зависимости от вашего дизайна */
-    padding: 10px 0; /* Добавьте отступы, если необходимо */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Добавьте тень для выпадающего меню */
-    z-index: 2;
   }
 
   .form-container, .modal-content {
     width: 100%; 
     margin-block-end: 50px;/* Использование полной ширины для контейнеров формы */
   }
+  
+  @media(min-width:412px) {
+    nav ul {
+        display: block;
+        position: static;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+    nav ul li a {
+        border: none;
+    }
+    .burgerimage {
+        display: none;
+    }
+} 
+  /* Добавляем стили для бургера */
+  .menu-btn {
+    display: none; /* Показываем бургер */
+  }
+
+  .menu {
+    display: none; /* Скрываем меню */
+  }
+
+  .menu.active {
+    display: block; /* Показываем меню, когда оно активно */
+  }
+  .form-container, .modal-content {
+    width: 100%; 
+    margin-block-end: 50px;/* Использование полной ширины для контейнеров формы */
+  }
+/* Стили для бургер-меню */
+.menu-btn {
+  display: none; /* Изначально скрываем бургер */
+}
+
+/* Отображение бургера на мобильных устройствах */
+.menu-btn {
+  display: none; /* Изначально скрываем бургер */
+}
+
+
+      /* Media query for screens larger than 768px */
+      @media screen and (min-width: 769px) {
+        .burger,
+        .menu-list {
+          display: none; /* Hide burger and menu on larger screens */
+        }
+  
+  /* Стили для линий бургера */
+  .menu-btn span {
+    width: 30px; /* Ширина линий */
+    height: 3px; /* Высота линий */
+    background-color: white; /* Цвет линий */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s; /* Плавное изменение стилей */
+  }
+
+  /* Анимация линий бургера при активации */
+  .menu-btn.active span:nth-of-type(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .menu-btn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.active span:nth-of-type(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  /* Отображение меню при активации */
+  .menu {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Цвет фона меню */
+    transform: translateX(-100%); /* Сдвиг меню влево за пределы экрана */
+    transition: transform 0.5s; /* Плавное появление/исчезновение */
+  }
+
+  /* Отображение меню при активации */
+  .menu.active {
+    transform: translateX(0); /* Возврат меню на экран */
+  }
+
+  /* Стили для пунктов меню */
+  .menu ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Выравнивание текста по центру */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .menu li {
+    margin-bottom: 20px; /* Промежуток между пунктами меню */
+  }
+
+  .menu li a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #222222; /* Цвет текста ссылок */
+    font-size: 20px; /* Размер текста */
+    transition: color 0.3s; /* Плавное изменение цвета текста */
+  }
+
+  /* Изменение цвета текста ссылок при наведении */
+  .menu li a:hover {
+    color: #545A2F; /* Новый цвет текста при наведении */
+  }
+}
 
   .footer {
     position: relative;
@@ -432,3 +664,142 @@ button {
  
   }
  }
+
+ @media(min-width:412px) {
+  nav ul {
+      display: block;
+      position: static;
+  }
+  nav ul li {
+      display: inline-block;
+  }
+  nav ul li a {
+      border: none;
+  }
+  .burgerimage {
+      display: none;
+  }
+}
+
+
+header {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.burger {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 26px;
+}
+.burger::before,
+.burger::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #f4f2f2;
+  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+}
+.burger::after {
+  bottom: 0;
+  transition: bottom 0.3s 0.15s, transform 0.3s;
+}
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+}
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s, transform 0.3s 0.15s;
+}
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  background: #fff;
+  text-align: center;
+  width: 311px;
+  height: 160px;
+  overflow: auto;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.burger-checkbox:checked ~ .menu-list {
+  display: block;
+}
+.menu-item {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background: #f4f4f4;
+}
+@media screen and (min-width: 769px) {
+  .burger,
+  .menu-list {
+    display: none; /* Hide burger and menu on larger screens */
+  }
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+ 
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+ 
+} /* Style span tag */
+ 
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+ 
+.side-menu {
+    display: none;
+} /* Hide checkbox */
