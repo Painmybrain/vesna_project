@@ -104,7 +104,8 @@
 }
 
 .header__order:hover {
-  text-decoration: underline 1px solid rgb(255, 255, 255);
+  -webkit-text-decoration: underline 1px solid rgb(255, 255, 255);
+          text-decoration: underline 1px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -187,7 +188,8 @@
 }
 
 .services__more:hover {
-  text-decoration: underline 2px solid rgb(84, 90, 47);
+  -webkit-text-decoration: underline 2px solid rgb(84, 90, 47);
+          text-decoration: underline 2px solid rgb(84, 90, 47);
 }
 
 .contact-container {
@@ -499,6 +501,4 @@
     font-family: Noah-Regular;
     font-size: 14px;
   }
-}
-
-/*# sourceMappingURL=style_services.css.map */
+}/*# sourceMappingURL=style_services.css.map */
