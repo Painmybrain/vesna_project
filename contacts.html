@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/style_portfolio.css" />
     <link rel="stylesheet" href="./assets/styles/style_contacts.css" />
     <link rel="stylesheet" href="./assets/styles/style_contacts.scss" />
+    <link rel="stylesheet" href="burger-menu.css" />
     <title>Контакты</title>
   </head>
   <body>
@@ -50,6 +51,23 @@
           </div>
         </div>
       </div>
+      <!-- бургер ням ням -->
+<input type="checkbox" id="menu-toggle" />
+<label for="menu-toggle" class="menu-btn">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+<div class="menu">
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+</div>
       <div class="page-title">Контакты</div>
     </header>
     <main class="main">
@@ -141,5 +159,18 @@
         <div class="footer__confidential">Политика конфиденциальности</div>
       </div>
     </footer>
+    <script>
+      // Функция для загрузки бургер-меню
+      function loadBurgerMenu() {
+        fetch('burger-menu.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('burger-menu-container').innerHTML = html;
+          })
+          .catch(error => console.error('Ошибка загрузки бургер-меню:', error));
+      }
+  
+      loadBurgerMenu();
+    </script>
   </body>
 </html>

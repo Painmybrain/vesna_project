@@ -99,6 +99,10 @@
   line-height: 48px;
 }
 
+.menu__burger {
+  display: none;
+}
+
 .main {
   display: grid;
   justify-items: center;
@@ -413,7 +417,7 @@
 
 @media screen and (max-width: 376px) {
   .header {
-    height: 25rem;
+    height: 30rem;
     margin-bottom: 3rem;
   }
   .header__title {
@@ -424,8 +428,112 @@
     font-size: 18px;
     line-height: 22px;
   }
+  header {
+    position: relative;
+  }
+  .header__logo {
+    z-index: 5;
+    padding: 0;
+    width: 107px;
+  }
+  .header__nav {
+    display: none;
+  }
   .header__contact {
     display: none;
+  }
+  .menu__burger {
+    display: block;
+  }
+  .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    z-index: 5;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 rgb(255, 255, 255);
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+  .menu-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    list-style: none;
+    padding: 10rem 3rem 0 3rem;
+    margin: 0;
+    display: none;
+    background: rgb(84, 90, 47);
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    display: block;
+  }
+  .menu-item {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .menu-item:hover {
+    background: rgb(153, 161, 142);
+  }
+  .burger__phone {
+    margin: auto;
+    margin-top: 5rem;
+    padding: 15px 15px;
+    color: rgb(26, 26, 24);
+    border: none;
+    text-align: center;
+    font-size: 24px;
+  }
+  .burger__consult {
+    border: none;
+    padding: 20px 0;
   }
   .main__button {
     background-image: url(../images/specific_service/button_arrow.png);
