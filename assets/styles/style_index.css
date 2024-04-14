@@ -1215,6 +1215,36 @@
     padding-right: 3%;
     text-align: center;
   }
+  .main__feedback-title {
+    text-align: center;
+    font-size: 20pt;
+  }
+  .feedback {
+    text-align: left;
+  }
+  .feedback__example {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .feedback__title {
+    width: 55vw;
+    height: 6vh;
+    font-size: 24px;
+  }
+  .feedback__title2 {
+    width: 65vw;
+    font-size: 20px;
+  }
+  .feedback__text {
+    width: 65vw;
+    font-size: 16px;
+  }
+  .feedback__arrows {
+    display: none;
+  }
+  .feedback__numbers {
+    display: none;
+  }
   .footer {
     position: relative;
     grid-template-columns: 1fr;
