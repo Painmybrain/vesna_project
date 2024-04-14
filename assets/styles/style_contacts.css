@@ -1,115 +1,434 @@
 @font-face {
-  font-family: Noah-Bold;
-  src: url(../fonts/Noah-Bold.ttf);
-}
-@font-face {
-  font-family: Noah-Regular;
-  src: url(../fonts/Noah-Regular.ttf);
-}
-@font-face {
   font-family: MarckScript-Regular;
   src: url(../fonts/MarckScript-Regular.ttf);
 }
-body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+
+.header {
+  justify-items: center;
+  justify-content: center;
+  background-image: url(../images/portfolio/main_foto.png);
+  background-size: cover;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 40% 20%;
+  gap: 2px;
+  width: 100%;
+  height: 35rem;
+  padding-top: 2rem;
 }
 
-.contact-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.contact-section .contact-header,
-.contact-section .contact-form,
-.contact-section .contact-info {
-  width: calc(50% - 10px);
-}
-.contact-section .contact-header h2,
-.contact-section .contact-form h2,
-.contact-section .contact-info h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: left;
-}
-.contact-section .contact-header input,
-.contact-section .contact-header textarea,
-.contact-section .contact-header button,
-.contact-section .contact-form input,
-.contact-section .contact-form textarea,
-.contact-section .contact-form button,
-.contact-section .contact-info input,
-.contact-section .contact-info textarea,
-.contact-section .contact-info button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-}
-.contact-section .contact-header input:last-child,
-.contact-section .contact-header textarea:last-child,
-.contact-section .contact-header button:last-child,
-.contact-section .contact-form input:last-child,
-.contact-section .contact-form textarea:last-child,
-.contact-section .contact-form button:last-child,
-.contact-section .contact-info input:last-child,
-.contact-section .contact-info textarea:last-child,
-.contact-section .contact-info button:last-child {
-  background-color: rgb(84, 90, 47);
+.page-title {
   color: white;
-  border: none;
-  cursor: pointer;
+  font-family: Noah-Bold;
+  font-size: 5rem;
+  margin-top: 100px; /* Отступ сверху */
+  margin-right: 800px;
+  text-align: center; /* Выравнивание по центру */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 90px;
 }
-.contact-section .contact-header .info-item,
-.contact-section .contact-form .info-item,
-.contact-section .contact-info .info-item {
+
+.contact-container {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 300px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form, .contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+} 
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+.consent-checkbox {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-}
-.contact-section .contact-header .info-item img,
-.contact-section .contact-form .info-item img,
-.contact-section .contact-info .info-item img {
-  width: 83px;
-  height: 83px;
-  margin-right: 10px;
-}
-.contact-section .contact-header .info-item span,
-.contact-section .contact-header .info-item a,
-.contact-section .contact-form .info-item span,
-.contact-section .contact-form .info-item a,
-.contact-section .contact-info .info-item span,
-.contact-section .contact-info .info-item a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #545A2F;
+  color: white;
+  padding: 20px 60px;
+  margin-bottom: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-info {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 83px;
+  height: 83px;
+  margin-right: 25px;
+}
+
+@media (max-width: 456px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    margin: 60px auto;
+    padding: 10px;
   }
-  .contact-section .contact-header,
-  .contact-section .contact-form,
-  .contact-section .contact-info {
-    width: 100%;
+
+  .contact-header {
+    margin-bottom: 40px;
   }
-  .contact-section .contact-header h2,
-  .contact-section .contact-form h2,
-  .contact-section .contact-info h2 {
-    text-align: center;
+
+  button {
+    padding: 15px 30px;
+    margin-bottom: 20px;
   }
-  .contact-section .contact-header .info-item img,
-  .contact-section .contact-form .info-item img,
-  .contact-section .contact-info .info-item img {
+
+  .consent-checkbox {
+    margin-bottom: 30px;
+  }
+
+  .icon img {
     width: 50px;
     height: 50px;
   }
-}/*# sourceMappingURL=style_contacts.css.map */
+}
+
+.contact-header + .contact-form {
+  margin-top: 40px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header__contact {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header__phone {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 10px;
+  margin-bottom: 5px;
+}
+
+.header__phone:hover {
+  background-color: #545A2F;
+  color: white;
+}
+
+.header__consulting {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.form-container input,
+.form-container button {
+  width: 80%;
+  margin: 10px 0;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-content {
+  background-image: url('../assets/images/consultation.png');
+  background-size: cover;
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Предотвращает повторение изображения */
+  width: 100%; /* Установите нужную ширину */
+  height: 100%; /* Установите нужную высоту */
+  position: relative;
+  width: 676px;
+  height: 631px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content h2 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: #545A2F;
+  font-size: 40px;
+  line-height: 1.4;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.modal-content p {
+  text-align: center;
+}
+
+.modal button {
+  background-color: #545A2F;
+  color: white;
+  padding: 20px 60px;
+  margin-bottom: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  width: 311px;
+  height: 60px;
+  padding: 15px 0;
+  margin: 70px auto;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
+.checkbox-label label {
+  margin-left: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.close:hover,
+.close:focus {
+  color: #777;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.modal input[type="text"],
+.modal input[type="tel"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+/* Стили для всех устройств */
+.burger {
+  display: none; /* Скрытие иконки бургера на десктопе */
+  cursor: pointer;
+  font-size: 28px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+}
+
+.menu {
+  display: none; /* Меню*/
+}
+
+@media (max-width: 768px) {
+  .header__nav, .header__contact {
+    display: none; /* Скрываем навигацию и контактную информацию */
+  }
+
+  .burger-checkbox {
+    display: block; /* Показываем чекбокс (по умолчанию скрыт) */
+    position: absolute;
+    top: 20px; /* Регулируем, если необходимо */
+    right: 20px; /* Регулируем, если необходимо */
+    width: 40px; /* Ширина бургера */
+    height: 25px; /* Высота бургера */
+    opacity: 0; /* Чекбокс не виден, но функционален */
+    z-index: 3; /* Чекбокс должен быть над бургером, чтобы можно было кликнуть */
+  }
+
+  .burger {
+    display: block; /* Показываем иконку бургер-меню */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  .menu-list {
+    display: none; /* Скрываем меню, пока не активирован чекбокс */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white; /* Вы можете выбрать другой цвет фона */
+    width: 300px; /* Или другая ширина, в зависимости от вашего дизайна */
+    padding: 10px 0; /* Добавьте отступы, если необходимо */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Добавьте тень для выпадающего меню */
+    z-index: 2;
+  }
+
+  .form-container, .modal-content {
+    width: 100%; 
+    margin-block-end: 50px;/* Использование полной ширины для контейнеров формы */
+  }
+
+  .footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;
+  }
+  .footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+  }
+  .footer__phone {
+    font-size: 20px;
+  }
+  .footer__email {
+    font-size: 20px;
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+  }
+  .footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+  }
+  .footer__instagram {
+    padding: 0;
+    text-align: center;
+  }
+  .footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+  }
+  .footer__confidential::after {
+    content: "© 2021 VESNA";
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+  .footer__socialmedia::before {
+    content: "Наверх";
+    position: absolute;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 50px 36px;
+    background-color: rgb(153, 161, 142);
+    background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat rgb(153, 161, 142);
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+  }
+
+  .pointer-back__img {
+    width: 100%;
+  }
+  .link_back {
+    visibility: hidden;
+  }
+  .link_back::before {
+    content: "Назад";
+    visibility: visible;
+    font-size: 14px;
+ 
+  }
+ }
