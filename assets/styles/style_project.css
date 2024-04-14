@@ -512,13 +512,13 @@ a {
   color: rgb(255, 255, 255);
 }
 
-/* Adapptive phone */
+/* Adaptive phone */
 @media screen and (max-width: 376px) {
   header {
     position: relative;
   }
   .header__logo {
-    z-index: 4;
+    z-index: 5;
     padding: 0;
     width: 107px;
   }
@@ -579,7 +579,7 @@ a {
     transition: bottom 0.3s, transform 0.3s 0.15s;
   }
   .menu-list {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -592,7 +592,6 @@ a {
     background: rgb(84, 90, 47);
     text-align: center;
     overflow: auto;
-    position: absolute;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
   .burger-checkbox:checked ~ .menu-list {
@@ -848,7 +847,6 @@ a {
     right: 1rem;
     bottom: 3rem;
     padding: 50px 36px;
-    background-color: rgb(153, 161, 142);
     background: url(/assets/images/project/footer_btn_up.png) 50% 25% no-repeat rgb(153, 161, 142);
     border-radius: 50%;
     color: rgb(255, 255, 255);
