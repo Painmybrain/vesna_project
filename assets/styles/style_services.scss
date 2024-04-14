@@ -128,7 +128,7 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .main__services {
-  max-width: 1336px;
+  max-width: 1280px;
   max-height: 562px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -184,12 +184,11 @@ $White: rgba(255, 255, 255, 1);
   width: 18vw;
   height: 7vh;
   border: 2px solid $HakiDark;
-  text-align: center;
+  align-items: center;
 }
 
 .services__more {
   padding: 1em 4em;
-  text-align: center;
   text-decoration: none;
   color: $Black;
   font-family: Noah-Regular;
