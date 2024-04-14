@@ -25,13 +25,14 @@ $White: rgba(255, 255, 255, 1);
 }
 
 /*Тут начинается header*/
-
 .header {
-    width: 100%;
-    height: 100vh;
-    background-size:100% 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
     background-repeat:no-repeat;
     background-image: url("/assets/images/main/Rectangle101.png");
+    background-position: center center;
+    background-attachment: fixed;
 } /*тут фон под меню*/
 
 .header__main {
@@ -41,6 +42,7 @@ $White: rgba(255, 255, 255, 1);
     gap: 1%;
     padding-top: 2%;
 } /*Обертка для меню навигации*/
+
 
 .header__logo {
     padding-left: 12%;
@@ -135,9 +137,13 @@ $White: rgba(255, 255, 255, 1);
 } /*Обертка листочков*/
 
 .header__leaves {
+    border-style: none;
     width: 100%;
-    height: 45vh;
-    padding-left: 15%;
+    height: 100%;
+    object-fit: contain;
+    // width: 100%;
+    // height: 45vh;
+    // padding-left: 15%;
 } /*Листочки справа*/
 
 .header__pictures-navigation {
@@ -149,7 +155,7 @@ $White: rgba(255, 255, 255, 1);
 
 /*Левая часть*/
 .header__slider-wrapper {
-    padding-top: 12%;
+    padding-top: 25%;
     padding-left: 45%;
 }
 .header__slider-project {
@@ -173,6 +179,10 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .header__slider-icon {
+    border-style: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     padding-top: 45%;
     padding-left: 29%;
 }
@@ -189,7 +199,8 @@ $White: rgba(255, 255, 255, 1);
 
 /*Стрелочки*/
 .header__arrows {
-    padding-top: 19%;
+    width: 100%;
+    padding-top: 30%;
     padding-left: 50%;
 }
 
@@ -204,6 +215,12 @@ $White: rgba(255, 255, 255, 1);
     padding-left: 23%;
 }
 
+.pages__numbers {
+    padding-top: 15%;
+}
+
+
+/*Main part*/
 .main__explanation-leaves {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
@@ -221,6 +238,7 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .main__explanation-text {
+    max-width: 100%;
     padding-top: 15%;
     padding-bottom: 1%;
     text-align: center;
@@ -238,8 +256,6 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .explanation-text__about {
-    // width: 45%;
-    // height: 85%;
     padding-top: 5%;
     padding-left: 15%;
     padding-right: 15%;
@@ -247,6 +263,7 @@ $White: rgba(255, 255, 255, 1);
     font-size: 14pt;
 }
 
+/*Part with the three pic*/
 .main__examples {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -259,11 +276,11 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .examples__pic1, .examples__pic2, .examples__pic3 {
-    width: 30em;
-    height: 23em;
+    width: 100%;
     padding: 1%;
 }
 
+/*Trust to professionals*/
 .main__trust-title {
     text-align: center;
     line-height: 1.5;
@@ -363,7 +380,7 @@ $White: rgba(255, 255, 255, 1);
     padding-left: 6vw;
 }
 
-
+/*What do we do*/
 .main__do {
     padding-top: 15%;
     font-family: Noah-Regular;
@@ -440,6 +457,8 @@ $White: rgba(255, 255, 255, 1);
     background-color: $HakiDark;
 }
 
+
+/*How to choose a plant*/
 .main__choose {
     display: grid;
     grid-template-columns: 1fr;
@@ -473,7 +492,7 @@ $White: rgba(255, 255, 255, 1);
 .main__choose-form {
     padding-top: 2%;
     padding-bottom: 5%;
-    background-color: $HakiLight;
+    background-color: #99A18E;
     border: none;
 }
 
@@ -507,6 +526,7 @@ $White: rgba(255, 255, 255, 1);
     background-color: $HakiDark;
 }
 
+/*Our projects*/
 .main__projects {
     padding-top: 10%;
     padding-left: 3%;
@@ -554,6 +574,8 @@ $White: rgba(255, 255, 255, 1);
     background-color: $HakiDark;
 }
 
+
+/*Four steps to the dreams*/
 .main__dreams {
     padding-top: 4%;
 }
@@ -561,6 +583,15 @@ $White: rgba(255, 255, 255, 1);
 .main__titles {
     text-align: center;
     font-family: Noah-Regular;
+}
+
+.main__dreams-title1 {
+    font-weight: 100;
+    font-size: 24pt;
+}
+
+.main__dreams-title2 {
+    font-size: 22pt;
 }
 
 .dreams__points {
@@ -747,6 +778,7 @@ $White: rgba(255, 255, 255, 1);
     content: "";
 }
 
+/*Часть справа "Хочу инструкцию*/
 .questions__sidebar {
     width:  48%;
     margin-left: 5%;
@@ -812,10 +844,6 @@ $White: rgba(255, 255, 255, 1);
     background-color: $HakiDark;
 }
 
-.sidebar__button:hover {
-
-}
-
 /*Часть Остались вопросы*/
 .main__more-questions {
     display: grid;
@@ -871,7 +899,7 @@ $White: rgba(255, 255, 255, 1);
 }
 
 .questions__up {
-    width: 15vh;
+    width: 7vw;
     height: 15vh;
     color: $White;
     background-color: $HakiLight;
@@ -931,4 +959,448 @@ $White: rgba(255, 255, 255, 1);
     font-family: Noah-Regular;
     font-size: 9pt;
     color: $White;
+}
+
+
+@media screen and (max-width: 1024px) {
+.header {
+        padding-top: 10px;
+}
+
+.header__main {
+    font-size: 18px;
+}
+
+.header__logo {
+    max-width: 120px;
+}
+
+.header__text-small {
+    font-size: 18px;
+    min-height: 20px;
+    margin: 0;
+}
+
+.header__main-title {
+    padding: 10px 0 0;
+}
+
+.header__pictures-navigation {
+    margin: 60px 0 0;
+}
+
+.explanation-text__title, .explanation-text__title2 {
+    font-size: 24px;
+}
+
+.main__do-title {
+    font-size: 45px;
+}
+
+.main__service1, .main__service2, .main__service3 {
+    padding-right: 3%;
+    font-size: 20px;
+}
+
+.service-button {
+    padding: 15px 50px;
+    margin-top: 5rem;
+}
+
+.main__projects-title {
+    font-size: 55px;
+}
+
+.main__projects-pic {
+    grid-template-columns: auto;
+    gap: 3px;
+    width: calc(100% - 80px);
+    padding-top: 50px;
+}
+
+.main__titles {
+    font-size: 24px;
+    margin: 0px 40px;
+    padding: 0px 0px 22px 0px;
+}
+
+.dreams__points {
+    max-width: 85%;
+}
+
+.main__why-title {
+    font-size: 45px;
+    padding-top: 50px;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px){
+
+.header {
+    background-size: 100% 100%;
+    padding-top: 10px;
+}
+
+.header__main {
+    width: calc(100% - 32px);
+    padding: 6px 0;
+    min-height: 70px;
+}
+
+.header__logo {
+    max-width: 107px;
+    padding-top: 10px;
+}
+
+.header__nav, .header__contact {
+    display: none;
+}
+
+.header__pictures {
+    grid-template-columns: 50% 40%;
+    justify-items: end;
+    margin-bottom: 10px;
+    padding: 60px 0px 0px 5px;
+}
+
+.header__text-small {
+    font-size: 14px;
+}
+
+.header__main-title {
+    min-height: 50px;
+    font-size: 22px;
+    padding: 5px 0 0;
+}
+
+.header__second-title {
+    width: 15%;
+    font-size: 18px;
+}
+
+.header__background {
+    padding-top: 170px;
+    max-width: 50rem;
+}
+
+.header__leaves {
+    width: 10rem;
+}
+
+.header__pictures-navigation {
+    grid-template-areas: "project";
+}
+
+.header__slider-wrapper {
+    min-height: 60px;
+    max-width: 174px;
+    grid-template-columns: 60% 5% 35%;
+    gap: 3px;
+    padding: 20px 7px;
+}
+
+.header__slider-title {
+    font-size: 16px;
+}
+
+.slider__project {
+    width: 40px;
+    height: 40px;
+    padding-top: 1rem;
+}
+
+.header__arrows, .arrows__pages {
+    display: none;
+}
+
+.main__explanation {
+    margin-bottom: 70px;
+}
+
+.explanation-text__title, .explanation-text__title2 {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    font-family: Noah-Regular;
+    padding: 1rem;
+}
+
+.main__explanation-text {
+    grid-template-columns: none;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.main__explanation-ll, .main__explanation-rl {
+    display: none;
+}
+
+.explanation-text__about {
+    font-size: 18px;
+}
+
+.main__examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+.main__trust-options {
+    background-image: none;
+}
+
+.main__trust {
+    max-width: 320px;
+}
+
+.main__trust-title1 {
+    max-width: 288px;
+    font-size: 24px;
+    margin: 20px 16px 46px 16px;
+}
+
+.main__trust-title2 {
+    max-width: 288px;
+    font-size: 24px;
+    margin: 20px 16px 46px 16px;
+}
+
+.main__trust-options {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.trust-options__title {
+    display: none;
+}
+
+.pictures__example1 {
+    max-width: 70vw;
+    margin: 0;
+}
+
+.pictures__example2 {
+    max-width: 35vw;
+    padding-right: 3%;
+    margin: 0;
+}
+
+.trust-options__points {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    min-width: 75vw;
+    padding-top: 20%;
+    padding-right: 10%;
+}
+
+.points__logo  {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.main__do-title {
+    font-size: 24px;
+}
+
+.main__service {
+    grid-template-columns: 1fr;
+    gap: 37px;
+    padding-top: 30px;
+}
+
+.main__service1, .main__service2, .main__service3 {
+    padding-right: 3%;
+    font-size: 16px;
+}
+
+.service-button {
+    width: 100%;
+    height: 53px;
+    margin-top: 30px;
+}
+
+.main__choose {
+    display: none;
+}
+
+.main__projects {
+    margin-bottom: 70px;
+}
+
+.main__projects-title {
+    padding-top: 80px;
+    font-size: 35px;
+}
+
+.main__projects-pic {
+    grid-template-columns: auto;
+    gap: 4px;
+    width: calc(100% - 10px);
+    padding-top: 27px;
+}
+
+.projects__button {
+    text-align: center;
+    padding-top: 45vh;
+}
+
+.all__button {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transform: none;
+    font-size: 24px;
+    color: white;
+    border-radius: 0%;
+    background-color: rgba(84, 90, 47, 1);
+    min-height: 60px;
+    padding: 15px;
+}
+
+.main__titles {
+    font-size: 25px;
+    max-width: 85vw;
+    margin: auto;
+    padding-bottom: 56px;
+}
+
+.dreams__points {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5% 1fr 5% 1fr 7% 1fr 7% 1fr;
+    max-width: 320px;
+    margin: 0;
+    padding: 0;
+}
+
+.points__number-1, .points__number-2, .points__number-3, .points__number-4{
+    text-align: center;
+}
+
+.dreams__points-1, .dreams__points-2, .dreams__points-3, .dreams__points-4 {
+    width: 85vw;
+    padding-left: 7%;
+    padding-right: 1%;
+    text-align:left;
+}
+
+.main__why-title {
+    font-family: "Noah-Bold";
+    font-size: 24px;
+}
+
+.main__why-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.why-points__reason1 {
+    grid-template-columns: 15% 1fr;
+}
+
+.main__feedback {
+    font-size: 20pt;
+    padding-right: 3%;
+    text-align: center;
+}
+
+.main__feedback-title {
+    text-align: center;
+    font-size: 20pt;
+}
+
+.feedback {
+    text-align: left;
+}
+
+.feedback__example {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.feedback__title {
+    width: 55vw;
+    height: 6vh;
+    font-size: 24px;
+}
+
+.feedback__title2 {
+    width: 65vw;
+    font-size: 20px;
+}
+
+.feedback__text {
+    width: 65vw;
+    font-size: 16px;
+}
+
+.feedback__arrows {
+    display: none;
+}
+
+.feedback__numbers {
+    display: none;
+}
+
+.footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;    
+}
+.footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+}
+.footer__phone {
+    font-size: 20px;
+}
+.footer__email {
+    font-size: 20px;
+}
+.footer__copyright {
+    display: none;
+}
+.footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+}
+.footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+}
+.footer__instagram {
+    padding: 0;
+    text-align: center;
+}
+.footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+}
+.footer__confidential::after {
+    content: '© 2021 VESNA';
+    display: block;
+    padding-top: 0.5rem;   
+    font-size: 16px;
+}
 }

@@ -99,6 +99,11 @@ $White: rgba(255, 255, 255, 1);
     font-size: 70px;
     line-height: 88px;
 }
+// бургер
+
+.menu__burger {
+    display: none;
+}
 
 // основная часть
 .main {
@@ -398,7 +403,7 @@ $White: rgba(255, 255, 255, 1);
 // АДАПТИВ мобильная версия
 @media screen and (max-width: 376px) {
     .header {
-        height: 25rem;
+        height: 30rem;
         margin-bottom: 3rem;
     }
     .header__title {
@@ -409,8 +414,113 @@ $White: rgba(255, 255, 255, 1);
         font-size: 18px;
         line-height: 22px;
     }
+    
+    header {
+        position: relative;
+    }
+    .header__logo {
+        z-index: 5;
+        padding: 0;
+        width: 107px;
+    }
+    .header__nav {
+        display: none;
+    }
     .header__contact {
         display: none;
+    }
+    .menu__burger {        
+        display: block;
+    }
+    .burger-checkbox {
+        position: absolute;
+        visibility: hidden;
+    }
+    .burger {
+        z-index: 5;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        border: none;
+        background: transparent;
+        width: 40px;
+        height: 26px;        
+    }
+    .burger::before,
+    .burger::after {
+        content: "";
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background: $White;
+    }
+    .burger::before {
+        top: 0;
+        box-shadow: 0 11px 0 $White;
+        transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+    }
+    .burger::after {
+        bottom: 0;
+        transition: bottom 0.3s 0.15s, transform 0.3s;
+    }
+    .burger-checkbox:checked + .burger::before {
+        top: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+        transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+    }
+    .burger-checkbox:checked + .burger::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
+        transition: bottom 0.3s, transform 0.3s 0.15s;
+    }
+    .menu-list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 4;
+        list-style: none;
+        padding: 10rem 3rem 0 3rem;
+        margin: 0;
+        display: none;
+        background: $HakiDark;
+        text-align: center;        
+        overflow: auto;                
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }     
+    .burger-checkbox:checked ~ .menu-list {
+        display: block;
+    }
+    .menu-item {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+        color: $White;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .menu-item:hover {
+        background: $HakiLight;
+    }
+    .burger__phone {
+        margin: auto;
+        margin-top: 5rem;
+        padding: 15px 15px;
+        color: $Black;
+        border: none;
+        text-align: center;
+        font-size: 24px;
+    }
+    .burger__consult {
+        border: none;
+        padding: 20px 0;
     }
     // кнопка назад
     
@@ -441,7 +551,7 @@ $White: rgba(255, 255, 255, 1);
 
     // Галерея 1
 .main__galery1 {
-    max-width: none;
+    max-width: 375px;
     width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -461,7 +571,7 @@ $White: rgba(255, 255, 255, 1);
 }
 .galery1__words {
     grid-area: galery1__words;
-    max-width: none;
+    max-width: 375px;
     width: 100%;
     display: grid;
     justify-items: start;
@@ -481,7 +591,7 @@ $White: rgba(255, 255, 255, 1);
 
 // галерея 2
 .main__galery2 {
-    max-width: none;
+    max-width: 375px;
     width: 100%;
     margin-bottom: 5rem;
 }
@@ -517,28 +627,42 @@ $White: rgba(255, 255, 255, 1);
 }
 // story
 .main__story {
+    // margin-left: -1.5rem;
     max-width: none;
-    width: 100%;
+    width: 375px;
     margin-bottom: 5rem;
     gap: 2rem;
+    justify-items: start;
+    justify-content: start;
+}
+.story__title {
+    width: 100%;
+    text-align: center;
 }
 .title__h2 {
-    max-width: none;
-    width: 100%;
+    max-width: 360px;
+    // width: 360px;
     font-size: 24px;
     line-height: 30px;
+    
+}
+.story__text {
+    width: 100%;
 }
 .text__h5 {
-    max-width: none;
-    width: 100%;
+    max-width: 360px;
+    // width: 360px;
     font-size: 16px;
     line-height: 20px;
+    text-align: start;
+    padding-left: 1rem;
 }
 
 // КОНТАКТЫ
 .contact-container {
+    // margin-left: -1.5rem;
     grid-template-columns: 1fr;
-    max-width: none;
+    max-width: 350px;
     width: 100%;
     max-height: 644px;
     margin-bottom: 5rem;
@@ -558,15 +682,16 @@ $White: rgba(255, 255, 255, 1);
     line-height: 22px;
 }
 .contact-info {
-    max-width: none;
+    max-width: 350px;
     width: 100%;
+    gap: 1rem;
 }
 .info-item h5,
 .info-item a {
     display: none;
 }
 .contact__form {
-    max-width: none;
+    max-width: 350px;
     width: 100%;
     height: 490px;
     display: grid;
@@ -579,7 +704,7 @@ $White: rgba(255, 255, 255, 1);
 }
 .contact_button button {
     max-width: none;
-    width: 374px;
+    width: 100%;
 }
 
 
@@ -592,7 +717,7 @@ $White: rgba(255, 255, 255, 1);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    margin-left: -2rem;
+    // margin-left: -2rem;
 }
 .previous__service {
     grid-template-columns: 1fr;
