@@ -24,11 +24,6 @@ $White: rgba(255, 255, 255, 1);
     box-sizing: border-box;
 }
 
-body {
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
 /*Тут начинается header*/
 .header {
     top: 0;
@@ -1278,13 +1273,14 @@ header {
 .main__trust-title1 {
     max-width: 288px;
     font-size: 24px;
-    margin: 20px 16px 46px 16px;
+    padding-top: 35%;
+    padding-left: 15%;
 }
 
 .main__trust-title2 {
     max-width: 288px;
     font-size: 24px;
-    margin: 20px 16px 46px 16px;
+    padding-left: 15%;
 }
 
 .main__trust-options {
@@ -1318,6 +1314,18 @@ header {
 .points__logo  {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+.logo-1 {
+    width: 50%;
+}
+
+.logo-2 {
+    width: 15vw;
+}
+
+.logo-3 {
+    width: 16vw;
 }
 
 .main__do-title {
@@ -1366,18 +1374,21 @@ header {
     padding-top: 45vh;
 }
 
-.all__button {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: none;
-    transform: none;
-    font-size: 24px;
-    color: white;
-    border-radius: 0%;
-    background-color: rgba(84, 90, 47, 1);
-    min-height: 60px;
-    padding: 15px;
+
+
+.all_button {
+    display: none;
+    // width: 100%;
+    // margin: 0;
+    // padding: 0;
+    // border: none;
+    // transform: none;
+    // font-size: 24px;
+    // color: white;
+    // border-radius: 0%;
+    // background-color: rgba(84, 90, 47, 1);
+    // min-height: 60px;
+    // padding: 15px;
 }
 
 .main__titles {
@@ -1470,7 +1481,6 @@ header {
     width: 45vw;
     text-align: left;
     font-size: 24px;
-    border: 1px solid red;
 }
 
 .main__questions {
